@@ -53,6 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\backtomain.cs" />
+     <Compile Include="Assets\GoBackLoser.cs" />
      <Compile Include="Assets\mainmenu.cs" />
  <Reference Include="UnityEditor.StandardEvents">
 <<<<<<< HEAD
