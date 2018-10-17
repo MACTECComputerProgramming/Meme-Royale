@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1516260390}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 49917167}
   - component: {fileID: 49917166}
   m_Layer: 5
-  m_Name: Text (8)
+  m_Name: Health Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,12 +140,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 164936397}
-  m_RootOrder: 1
+  m_Father: {fileID: 2144899134}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -77.3999, y: 133.90002}
+  m_AnchoredPosition: {x: 4.6000977, y: 0}
   m_SizeDelta: {x: 52.748, y: 46.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &49917166
@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 59507859}
   - component: {fileID: 59507861}
   - component: {fileID: 59507860}
+  - component: {fileID: 59507862}
   m_Layer: 5
   m_Name: Dat boi
   m_TagString: Untagged
@@ -217,15 +218,13 @@ RectTransform:
   m_Children:
   - {fileID: 2046579323}
   - {fileID: 424321080}
-  - {fileID: 140018631}
   - {fileID: 631816132}
-  - {fileID: 1786173826}
   m_Father: {fileID: 905361457}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 35}
+  m_AnchoredPosition: {x: -800, y: 268}
   m_SizeDelta: {x: 276, y: 351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59507860
@@ -262,6 +261,23 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 59507858}
   m_CullTransparentMesh: 0
+--- !u!114 &59507862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59507858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
+  nameText: {fileID: 0}
+  artworkImage: {fileID: 0}
+  manaText: {fileID: 0}
+  attackText: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &101065582
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +289,7 @@ GameObject:
   - component: {fileID: 101065585}
   - component: {fileID: 101065584}
   m_Layer: 5
-  m_Name: Text (13)
+  m_Name: Attack Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -289,12 +305,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1017508133}
-  m_RootOrder: 3
+  m_Father: {fileID: 1029968620}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.099976, y: 61.789978}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 34.8, y: 33.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101065584
@@ -348,7 +364,7 @@ GameObject:
   - component: {fileID: 113328508}
   - component: {fileID: 113328507}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +379,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2001091305}
   m_Father: {fileID: 233174569}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -416,8 +433,9 @@ GameObject:
   - component: {fileID: 140018631}
   - component: {fileID: 140018633}
   - component: {fileID: 140018632}
+  - component: {fileID: 140018634}
   m_Layer: 5
-  m_Name: Text (7)
+  m_Name: Attack Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,12 +451,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 59507859}
-  m_RootOrder: 2
+  m_Father: {fileID: 424321080}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.79999, y: 60.984985}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 34.8, y: 33.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &140018632
@@ -481,6 +499,23 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 140018630}
   m_CullTransparentMesh: 0
+--- !u!114 &140018634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 140018630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
+  nameText: {fileID: 0}
+  artworkImage: {fileID: 0}
+  manaText: {fileID: 0}
+  attackText: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &164936396
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,17 +544,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2144899134}
-  - {fileID: 49917165}
   - {fileID: 927796048}
-  - {fileID: 1691467747}
   - {fileID: 559644927}
-  - {fileID: 579002491}
   m_Father: {fileID: 905361457}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2337.8, y: 635}
+  m_AnchoredPosition: {x: -1354, y: 646}
   m_SizeDelta: {x: 277, y: 353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &164936398
@@ -567,7 +599,7 @@ GameObject:
   - component: {fileID: 197365558}
   - component: {fileID: 197365557}
   m_Layer: 5
-  m_Name: BlueCircle (3)
+  m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -582,9 +614,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 380445768}
   m_Father: {fileID: 796280739}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -636,7 +669,7 @@ GameObject:
   - component: {fileID: 214406187}
   - component: {fileID: 214406186}
   m_Layer: 5
-  m_Name: Text (21)
+  m_Name: Mana Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -652,12 +685,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 233174569}
-  m_RootOrder: 5
+  m_Father: {fileID: 1072284651}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60.19995, y: -15.5}
+  m_AnchoredPosition: {x: 9.100098, y: -1.7999878}
   m_SizeDelta: {x: 73.26, y: 60.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &214406186
@@ -728,17 +761,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 113328506}
-  - {fileID: 2001091305}
   - {fileID: 1200652519}
-  - {fileID: 1355075088}
   - {fileID: 1072284651}
-  - {fileID: 214406185}
   m_Father: {fileID: 905361457}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2337.8, y: 85}
+  m_AnchoredPosition: {x: -1355, y: 275}
   m_SizeDelta: {x: 275, y: 351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &233174570
@@ -786,7 +816,7 @@ GameObject:
   - component: {fileID: 270047659}
   - component: {fileID: 270047658}
   m_Layer: 5
-  m_Name: Text (18)
+  m_Name: Mana Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,12 +832,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 645158967}
-  m_RootOrder: 5
+  m_Father: {fileID: 1191939476}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -58, y: -15.830017}
+  m_AnchoredPosition: {x: 11.200012, y: -2.130005}
   m_SizeDelta: {x: 73.26, y: 60.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &270047658
@@ -878,17 +908,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 465227896}
-  - {fileID: 322428230}
   - {fileID: 2034686695}
-  - {fileID: 1962969015}
   - {fileID: 861366863}
-  - {fileID: 1879266073}
   m_Father: {fileID: 905361457}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1637.8, y: 35}
+  m_AnchoredPosition: {x: -1078, y: 271}
   m_SizeDelta: {x: 274, y: 349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271838051
@@ -936,7 +963,7 @@ GameObject:
   - component: {fileID: 322428232}
   - component: {fileID: 322428231}
   m_Layer: 5
-  m_Name: Text (23)
+  m_Name: Health Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -952,12 +979,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 271838050}
-  m_RootOrder: 1
+  m_Father: {fileID: 465227896}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -79.30005, y: 134.41998}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
   m_SizeDelta: {x: 52.748, y: 46.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &322428231
@@ -1011,7 +1038,7 @@ GameObject:
   - component: {fileID: 371134094}
   - component: {fileID: 371134093}
   m_Layer: 5
-  m_Name: Text (12)
+  m_Name: Mana Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,12 +1054,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1017508133}
-  m_RootOrder: 5
+  m_Father: {fileID: 1238853749}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -58.900024, y: -15.830017}
+  m_AnchoredPosition: {x: 10.5, y: -2.130005}
   m_SizeDelta: {x: 73.26, y: 60.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &371134093
@@ -1086,7 +1113,7 @@ GameObject:
   - component: {fileID: 380445770}
   - component: {fileID: 380445769}
   m_Layer: 5
-  m_Name: Text (15)
+  m_Name: Mana Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1102,12 +1129,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 796280739}
-  m_RootOrder: 5
+  m_Father: {fileID: 197365556}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -57.440002, y: -18.200012}
+  m_AnchoredPosition: {x: 11.359985, y: -2.369995}
   m_SizeDelta: {x: 73.26, y: 60.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380445769
@@ -1160,8 +1187,9 @@ GameObject:
   - component: {fileID: 424321080}
   - component: {fileID: 424321082}
   - component: {fileID: 424321081}
+  - component: {fileID: 424321083}
   m_Layer: 5
-  m_Name: YellowCircle
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1176,7 +1204,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 140018631}
   m_Father: {fileID: 59507859}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1219,6 +1248,23 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 424321079}
   m_CullTransparentMesh: 0
+--- !u!114 &424321083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 424321079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
+  nameText: {fileID: 0}
+  artworkImage: {fileID: 0}
+  manaText: {fileID: 0}
+  attackText: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &465227895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,7 +1276,7 @@ GameObject:
   - component: {fileID: 465227898}
   - component: {fileID: 465227897}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1245,7 +1291,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 322428230}
   m_Father: {fileID: 271838050}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1335,8 +1382,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
-  orthographic size: 5
+  orthographic: 0
+  orthographic size: 178.2923
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1358,13 +1405,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 230, y: 1972, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &554135130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1423,7 @@ GameObject:
   - component: {fileID: 554135133}
   - component: {fileID: 554135132}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1391,7 +1438,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1407269019}
   m_Father: {fileID: 1017508133}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1445,7 +1493,7 @@ GameObject:
   - component: {fileID: 559644929}
   - component: {fileID: 559644928}
   m_Layer: 5
-  m_Name: BlueCircle (1)
+  m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1460,9 +1508,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 579002491}
   m_Father: {fileID: 164936397}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1514,7 +1563,7 @@ GameObject:
   - component: {fileID: 579002493}
   - component: {fileID: 579002492}
   m_Layer: 5
-  m_Name: Text (9)
+  m_Name: Mana Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1530,12 +1579,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 164936397}
-  m_RootOrder: 5
+  m_Father: {fileID: 559644927}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60.19995, y: -15.599976}
+  m_AnchoredPosition: {x: 9.100098, y: -1.7999878}
   m_SizeDelta: {x: 73.26, y: 60.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579002492
@@ -1589,7 +1638,7 @@ GameObject:
   - component: {fileID: 588161918}
   - component: {fileID: 588161917}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1604,7 +1653,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 883103948}
   m_Father: {fileID: 796280739}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1719,8 +1769,9 @@ GameObject:
   - component: {fileID: 631816132}
   - component: {fileID: 631816134}
   - component: {fileID: 631816133}
+  - component: {fileID: 631816135}
   m_Layer: 5
-  m_Name: BlueCircle
+  m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1735,9 +1786,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1786173826}
   m_Father: {fileID: 59507859}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1778,6 +1830,23 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 631816131}
   m_CullTransparentMesh: 0
+--- !u!114 &631816135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 631816131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
+  nameText: {fileID: 0}
+  artworkImage: {fileID: 0}
+  manaText: {fileID: 0}
+  attackText: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &645158966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1806,17 +1875,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1929164791}
-  - {fileID: 1761658961}
   - {fileID: 1023529858}
-  - {fileID: 1807921402}
   - {fileID: 1191939476}
-  - {fileID: 270047657}
   m_Father: {fileID: 905361457}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 685}
+  m_AnchoredPosition: {x: -1635, y: 270}
   m_SizeDelta: {x: 276, y: 353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645158968
@@ -1881,17 +1947,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 588161916}
-  - {fileID: 883103948}
   - {fileID: 1272152811}
-  - {fileID: 1371292474}
   - {fileID: 197365556}
-  - {fileID: 380445768}
   m_Father: {fileID: 905361457}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -810, y: 685}
+  m_AnchoredPosition: {x: -803, y: 653}
   m_SizeDelta: {x: 276, y: 352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796280740
@@ -1939,7 +2002,7 @@ GameObject:
   - component: {fileID: 861366865}
   - component: {fileID: 861366864}
   m_Layer: 5
-  m_Name: BlueCircle (6)
+  m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1954,9 +2017,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1879266073}
   m_Father: {fileID: 271838050}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2008,7 +2072,7 @@ GameObject:
   - component: {fileID: 883103950}
   - component: {fileID: 883103949}
   m_Layer: 5
-  m_Name: Text (17)
+  m_Name: Health Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2024,12 +2088,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 796280739}
-  m_RootOrder: 1
+  m_Father: {fileID: 588161916}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.79999, y: 132.40002}
+  m_AnchoredPosition: {x: 5.1000366, y: 0}
   m_SizeDelta: {x: 52.748, y: 46.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &883103949
@@ -2095,7 +2159,7 @@ RectTransform:
   m_GameObject: {fileID: 905361456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.41473716, y: 0.40847093, z: 1}
   m_Children:
   - {fileID: 59507859}
   - {fileID: 271838050}
@@ -2109,7 +2173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 506.71, y: -352.27}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &927796047
@@ -2123,7 +2187,7 @@ GameObject:
   - component: {fileID: 927796050}
   - component: {fileID: 927796049}
   m_Layer: 5
-  m_Name: YellowCircle (1)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2138,9 +2202,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1691467747}
   m_Father: {fileID: 164936397}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2209,17 +2274,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 554135131}
-  - {fileID: 1407269019}
   - {fileID: 1029968620}
-  - {fileID: 101065583}
   - {fileID: 1238853749}
-  - {fileID: 371134092}
   m_Father: {fileID: 905361457}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1598.9, y: 685}
+  m_AnchoredPosition: {x: -1080, y: 649}
   m_SizeDelta: {x: 276, y: 353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017508134
@@ -2267,7 +2329,7 @@ GameObject:
   - component: {fileID: 1023529860}
   - component: {fileID: 1023529859}
   m_Layer: 5
-  m_Name: YellowCircle (4)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2282,9 +2344,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1807921402}
   m_Father: {fileID: 645158967}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2336,7 +2399,7 @@ GameObject:
   - component: {fileID: 1029968622}
   - component: {fileID: 1029968621}
   m_Layer: 5
-  m_Name: YellowCircle (2)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2351,9 +2414,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 101065583}
   m_Father: {fileID: 1017508133}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2405,7 +2469,7 @@ GameObject:
   - component: {fileID: 1072284653}
   - component: {fileID: 1072284652}
   m_Layer: 5
-  m_Name: BlueCircle (5)
+  m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2420,9 +2484,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 214406185}
   m_Father: {fileID: 233174569}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2473,6 +2538,7 @@ GameObject:
   - component: {fileID: 1168950227}
   - component: {fileID: 1168950229}
   - component: {fileID: 1168950228}
+  - component: {fileID: 1168950230}
   m_Layer: 5
   m_Name: Health Text
   m_TagString: Untagged
@@ -2538,6 +2604,23 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1168950226}
   m_CullTransparentMesh: 0
+--- !u!114 &1168950230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1168950226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
+  nameText: {fileID: 0}
+  artworkImage: {fileID: 0}
+  manaText: {fileID: 0}
+  attackText: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &1191939475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,7 +2632,7 @@ GameObject:
   - component: {fileID: 1191939478}
   - component: {fileID: 1191939477}
   m_Layer: 5
-  m_Name: BlueCircle (4)
+  m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2564,9 +2647,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 270047657}
   m_Father: {fileID: 645158967}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2618,7 +2702,7 @@ GameObject:
   - component: {fileID: 1200652521}
   - component: {fileID: 1200652520}
   m_Layer: 5
-  m_Name: YellowCircle (5)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2633,9 +2717,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1355075088}
   m_Father: {fileID: 233174569}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2687,7 +2772,7 @@ GameObject:
   - component: {fileID: 1238853751}
   - component: {fileID: 1238853750}
   m_Layer: 5
-  m_Name: BlueCircle (2)
+  m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2702,9 +2787,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 371134092}
   m_Father: {fileID: 1017508133}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2756,7 +2842,7 @@ GameObject:
   - component: {fileID: 1272152813}
   - component: {fileID: 1272152812}
   m_Layer: 5
-  m_Name: YellowCircle (3)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2771,9 +2857,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1371292474}
   m_Father: {fileID: 796280739}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2825,7 +2912,7 @@ GameObject:
   - component: {fileID: 1355075090}
   - component: {fileID: 1355075089}
   m_Layer: 5
-  m_Name: Text (22)
+  m_Name: Attack Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2841,12 +2928,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 233174569}
-  m_RootOrder: 3
+  m_Father: {fileID: 1200652519}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.69995, y: 60.149994}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 34.8, y: 33.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355075089
@@ -2900,7 +2987,7 @@ GameObject:
   - component: {fileID: 1371292476}
   - component: {fileID: 1371292475}
   m_Layer: 5
-  m_Name: Text (19)
+  m_Name: Attack Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2916,12 +3003,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 796280739}
-  m_RootOrder: 3
+  m_Father: {fileID: 1272152811}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.20001, y: 60.200012}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 34.8, y: 33.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1371292475
@@ -3052,7 +3139,7 @@ RectTransform:
   - {fileID: 905361457}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 86.704}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3069,7 +3156,7 @@ GameObject:
   - component: {fileID: 1407269021}
   - component: {fileID: 1407269020}
   m_Layer: 5
-  m_Name: Text (11)
+  m_Name: Health Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3085,12 +3172,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1017508133}
-  m_RootOrder: 1
+  m_Father: {fileID: 554135131}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78.69995, y: 134.30005}
+  m_AnchoredPosition: {x: 2.4000244, y: 0}
   m_SizeDelta: {x: 52.748, y: 46.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1407269020
@@ -3133,6 +3220,72 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1407269018}
   m_CullTransparentMesh: 0
+--- !u!1 &1516260389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1516260391}
+  - component: {fileID: 1516260390}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1516260390
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1516260389}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1516260391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1516260389}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 534.0339, y: 31.237442, z: -7.02155}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1691467746
 GameObject:
   m_ObjectHideFlags: 0
@@ -3144,7 +3297,7 @@ GameObject:
   - component: {fileID: 1691467749}
   - component: {fileID: 1691467748}
   m_Layer: 5
-  m_Name: Text (10)
+  m_Name: Attack Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3160,12 +3313,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 164936397}
-  m_RootOrder: 3
+  m_Father: {fileID: 927796048}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.69995, y: 61.02997}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 34.8, y: 33.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691467748
@@ -3219,7 +3372,7 @@ GameObject:
   - component: {fileID: 1761658963}
   - component: {fileID: 1761658962}
   m_Layer: 5
-  m_Name: Text (14)
+  m_Name: Health Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3235,12 +3388,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 645158967}
-  m_RootOrder: 1
+  m_Father: {fileID: 1929164791}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -76.600006, y: 132.40002}
+  m_AnchoredPosition: {x: 4.899994, y: -1.9000244}
   m_SizeDelta: {x: 52.748, y: 46.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1761658962
@@ -3293,8 +3446,9 @@ GameObject:
   - component: {fileID: 1786173826}
   - component: {fileID: 1786173828}
   - component: {fileID: 1786173827}
+  - component: {fileID: 1786173829}
   m_Layer: 5
-  m_Name: Text (6)
+  m_Name: Mana Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3310,12 +3464,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 59507859}
-  m_RootOrder: 4
+  m_Father: {fileID: 631816132}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60.700012, y: -15.244995}
+  m_AnchoredPosition: {x: 8.299988, y: -1.6849976}
   m_SizeDelta: {x: 73.26, y: 60.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1786173827
@@ -3358,6 +3512,23 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1786173825}
   m_CullTransparentMesh: 0
+--- !u!114 &1786173829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1786173825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
+  nameText: {fileID: 0}
+  artworkImage: {fileID: 0}
+  manaText: {fileID: 0}
+  attackText: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &1807921401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3369,7 +3540,7 @@ GameObject:
   - component: {fileID: 1807921404}
   - component: {fileID: 1807921403}
   m_Layer: 5
-  m_Name: Text (16)
+  m_Name: Attack Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3385,12 +3556,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 645158967}
-  m_RootOrder: 3
+  m_Father: {fileID: 1023529858}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.20001, y: 61.789978}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 34.8, y: 33.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807921403
@@ -3444,7 +3615,7 @@ GameObject:
   - component: {fileID: 1879266075}
   - component: {fileID: 1879266074}
   m_Layer: 5
-  m_Name: Text (24)
+  m_Name: Mana Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3460,12 +3631,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 271838050}
-  m_RootOrder: 5
+  m_Father: {fileID: 861366863}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59, y: -15.244995}
+  m_AnchoredPosition: {x: 35.99993, y: -1.6849976}
   m_SizeDelta: {x: 73.26, y: 60.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879266074
@@ -3519,7 +3690,7 @@ GameObject:
   - component: {fileID: 1929164793}
   - component: {fileID: 1929164792}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3534,7 +3705,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1761658961}
   m_Father: {fileID: 645158967}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3588,7 +3760,7 @@ GameObject:
   - component: {fileID: 1962969017}
   - component: {fileID: 1962969016}
   m_Layer: 5
-  m_Name: Text (25)
+  m_Name: Attack Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3604,12 +3776,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 271838050}
-  m_RootOrder: 3
+  m_Father: {fileID: 2034686695}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -107.19995, y: 60.984985}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 34.8, y: 33.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962969016
@@ -3663,7 +3835,7 @@ GameObject:
   - component: {fileID: 2001091307}
   - component: {fileID: 2001091306}
   m_Layer: 5
-  m_Name: Text (20)
+  m_Name: Health Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3679,12 +3851,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 233174569}
-  m_RootOrder: 1
+  m_Father: {fileID: 113328506}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -77.3999, y: 133.66998}
+  m_AnchoredPosition: {x: 3.6000977, y: 0}
   m_SizeDelta: {x: 52.748, y: 46.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2001091306
@@ -3738,7 +3910,7 @@ GameObject:
   - component: {fileID: 2034686697}
   - component: {fileID: 2034686696}
   m_Layer: 5
-  m_Name: YellowCircle (6)
+  m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3753,9 +3925,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1962969015}
   m_Father: {fileID: 271838050}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3806,6 +3979,7 @@ GameObject:
   - component: {fileID: 2046579323}
   - component: {fileID: 2046579325}
   - component: {fileID: 2046579324}
+  - component: {fileID: 2046579326}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -3866,6 +4040,23 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2046579322}
   m_CullTransparentMesh: 0
+--- !u!114 &2046579326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046579322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
+  nameText: {fileID: 0}
+  artworkImage: {fileID: 0}
+  manaText: {fileID: 0}
+  attackText: {fileID: 0}
+  healthText: {fileID: 0}
 --- !u!1 &2144899133
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +4068,7 @@ GameObject:
   - component: {fileID: 2144899136}
   - component: {fileID: 2144899135}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3892,7 +4083,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 49917165}
   m_Father: {fileID: 164936397}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
