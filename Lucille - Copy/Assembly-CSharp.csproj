@@ -57,6 +57,18 @@
      <Compile Include="Assets\GoBackLoser.cs" />
      <Compile Include="Assets\mainmenu.cs" />
  <Reference Include="UnityEditor.StandardEvents">
+<<<<<<< HEAD
+ <HintPath>C:/Users/CS180/Desktop/Meme-RoyaleTW/Meme-Royale/Lucille - Copy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>C:/Users/CS180/Desktop/Meme-RoyaleTW/Meme-Royale/Lucille - Copy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>C:/Users/CS180/Desktop/Meme-RoyaleTW/Meme-Royale/Lucille - Copy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>C:/Users/CS180/Desktop/Meme-RoyaleTW/Meme-Royale/Lucille - Copy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+=======
  <HintPath>C:/Users/CS180/Desktop/Meme-RoyaleDY/Meme-Royale/Lucille - Copy/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
@@ -67,6 +79,7 @@
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/CS180/Desktop/Meme-RoyaleDY/Meme-Royale/Lucille - Copy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+>>>>>>> a60b42dc3f8cdd62ec6782e87d20baf277eabe35
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
