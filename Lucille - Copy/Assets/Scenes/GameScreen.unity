@@ -197,8 +197,8 @@ GameObject:
   m_Component:
   - component: {fileID: 59507859}
   - component: {fileID: 59507861}
-  - component: {fileID: 59507860}
   - component: {fileID: 59507862}
+  - component: {fileID: 59507860}
   m_Layer: 5
   m_Name: Dat boi
   m_TagString: Untagged
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 59507858}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -246,14 +246,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8c9c96f561f4c1b4cabbb886d5b6271d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 29ac2f125a89f54499acdf208dc7c5e1, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &59507861
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -272,10 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
-  manaText: {fileID: 1786173827}
-  attackText: {fileID: 140018632}
-  healthText: {fileID: 1168950228}
 --- !u!1 &101065582
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +390,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 113328505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -406,14 +401,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 79cf9be764fe1bf4f9920d8380ea7c44, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: aa7f3cb9d5536ba4ab3cf51a0a5d61ff, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &113328508
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -508,10 +502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
-  manaText: {fileID: 0}
-  attackText: {fileID: 0}
-  healthText: {fileID: 0}
 --- !u!1 &164936396
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,8 +511,8 @@ GameObject:
   m_Component:
   - component: {fileID: 164936397}
   - component: {fileID: 164936399}
-  - component: {fileID: 164936398}
   - component: {fileID: 164936400}
+  - component: {fileID: 164936398}
   m_Layer: 5
   m_Name: Phil swift
   m_TagString: Untagged
@@ -559,7 +549,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 164936396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -570,14 +560,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 50da430cc3f4f554ea3deff93ad26dbc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 2941eb63e33dbba40900eab52366108e, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &164936399
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -596,10 +585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 933aa56749b379445bf19312953faff7, type: 2}
-  manaText: {fileID: 579002492}
-  attackText: {fileID: 1691467748}
-  healthText: {fileID: 49917166}
 --- !u!1 &197365555
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +629,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 197365555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -655,14 +640,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5f907f8db5abf10408e55592531bd4e8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: f20628cc00c26ee45aec1a4d124787d8, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &197365558
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -754,8 +738,8 @@ GameObject:
   m_Component:
   - component: {fileID: 233174569}
   - component: {fileID: 233174571}
-  - component: {fileID: 233174570}
   - component: {fileID: 233174572}
+  - component: {fileID: 233174570}
   m_Layer: 5
   m_Name: Moth
   m_TagString: Untagged
@@ -792,7 +776,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 233174568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -803,14 +787,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 028410ec2964a7b4eaeb52d5ac02d29f, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 8c311bd09114a974a838561a45dcb1ea, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &233174571
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -829,10 +812,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: b339047b7b7646f428cb1041d5831361, type: 2}
-  manaText: {fileID: 214406186}
-  attackText: {fileID: 1355075089}
-  healthText: {fileID: 2001091306}
 --- !u!1 &270047656
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,8 +896,8 @@ GameObject:
   m_Component:
   - component: {fileID: 271838050}
   - component: {fileID: 271838052}
-  - component: {fileID: 271838051}
   - component: {fileID: 271838053}
+  - component: {fileID: 271838051}
   m_Layer: 5
   m_Name: Lamp
   m_TagString: Untagged
@@ -955,7 +934,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 271838049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -966,14 +945,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f24029e076168ce46946aca86109cd83, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: dbd28e1b19baa314c863ef4982da4ea3, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &271838052
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -992,10 +970,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 05783747c78b49a47a9e7774dc269479, type: 2}
-  manaText: {fileID: 1879266074}
-  attackText: {fileID: 1962969016}
-  healthText: {fileID: 322428231}
 --- !u!1 &322428229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,8 +1204,8 @@ GameObject:
   m_Component:
   - component: {fileID: 424321080}
   - component: {fileID: 424321082}
-  - component: {fileID: 424321081}
   - component: {fileID: 424321083}
+  - component: {fileID: 424321081}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -1266,7 +1240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 424321079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1277,14 +1251,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 33c47c1cf0c5df442a29811d9bfe0833, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 00401195bcb33a4419a3844d203ee641, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &424321082
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1303,10 +1276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
-  manaText: {fileID: 0}
-  attackText: {fileID: 0}
-  healthText: {fileID: 0}
 --- !u!1 &465227895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,7 +1320,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 465227895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1362,14 +1331,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 79cf9be764fe1bf4f9920d8380ea7c44, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: aa7f3cb9d5536ba4ab3cf51a0a5d61ff, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &465227898
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1498,7 +1466,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 554135130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1509,14 +1477,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 79cf9be764fe1bf4f9920d8380ea7c44, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: aa7f3cb9d5536ba4ab3cf51a0a5d61ff, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &554135133
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1568,7 +1535,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 559644926}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1579,14 +1546,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5f907f8db5abf10408e55592531bd4e8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: f20628cc00c26ee45aec1a4d124787d8, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &559644929
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1713,7 +1679,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 588161915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1724,14 +1690,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 79cf9be764fe1bf4f9920d8380ea7c44, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: aa7f3cb9d5536ba4ab3cf51a0a5d61ff, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &588161918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1810,8 +1775,8 @@ GameObject:
   m_Component:
   - component: {fileID: 631816132}
   - component: {fileID: 631816134}
-  - component: {fileID: 631816133}
   - component: {fileID: 631816135}
+  - component: {fileID: 631816133}
   m_Layer: 5
   m_Name: Mana
   m_TagString: Untagged
@@ -1846,7 +1811,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 631816131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1857,14 +1822,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5f907f8db5abf10408e55592531bd4e8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: f20628cc00c26ee45aec1a4d124787d8, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &631816134
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1883,10 +1847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
-  manaText: {fileID: 0}
-  attackText: {fileID: 0}
-  healthText: {fileID: 0}
 --- !u!1 &645158966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1896,8 +1856,8 @@ GameObject:
   m_Component:
   - component: {fileID: 645158967}
   - component: {fileID: 645158969}
-  - component: {fileID: 645158968}
   - component: {fileID: 645158970}
+  - component: {fileID: 645158968}
   m_Layer: 5
   m_Name: Yodel boy
   m_TagString: Untagged
@@ -1934,7 +1894,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 645158966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1945,14 +1905,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 051116e6d3c6cdd4688d8d522cfc63fc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: acc230ef09681654d8b9c6a41903ba0b, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &645158969
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1971,10 +1930,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: fc6c004aa58414147a74888fb2a9fa86, type: 2}
-  manaText: {fileID: 270047658}
-  attackText: {fileID: 1807921403}
-  healthText: {fileID: 1761658962}
 --- !u!1 &796280738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,8 +1939,8 @@ GameObject:
   m_Component:
   - component: {fileID: 796280739}
   - component: {fileID: 796280741}
-  - component: {fileID: 796280740}
   - component: {fileID: 796280742}
+  - component: {fileID: 796280740}
   m_Layer: 5
   m_Name: 'TEL '
   m_TagString: Untagged
@@ -2022,7 +1977,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 796280738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2033,14 +1988,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 43a60e72bf2bf904987b2f65b3407fa6, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 7561fff69fc4ffa46a396098625c1925, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &796280741
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2059,10 +2013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 538d6a5ef5fc4774592d1f2cda303550, type: 2}
-  manaText: {fileID: 380445769}
-  attackText: {fileID: 1371292475}
-  healthText: {fileID: 883103949}
 --- !u!1 &861366862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,7 +2057,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 861366862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2118,14 +2068,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5f907f8db5abf10408e55592531bd4e8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: f20628cc00c26ee45aec1a4d124787d8, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &861366865
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2292,7 +2241,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 927796047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2303,14 +2252,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 33c47c1cf0c5df442a29811d9bfe0833, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 00401195bcb33a4419a3844d203ee641, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &927796050
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2327,8 +2275,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1017508133}
   - component: {fileID: 1017508135}
-  - component: {fileID: 1017508134}
   - component: {fileID: 1017508136}
+  - component: {fileID: 1017508134}
   m_Layer: 5
   m_Name: Shrek
   m_TagString: Untagged
@@ -2365,7 +2313,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1017508132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2376,14 +2324,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 518b42d44f1d33d428554e170b381ce4, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 213a1fa0ef1973a449d8b218ca36dde9, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1017508135
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2402,10 +2349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: def28aed401f1804588e1343783741f8, type: 2}
-  manaText: {fileID: 371134093}
-  attackText: {fileID: 101065584}
-  healthText: {fileID: 1407269020}
 --- !u!1 &1023529857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,7 +2393,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1023529857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2461,14 +2404,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 33c47c1cf0c5df442a29811d9bfe0833, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 00401195bcb33a4419a3844d203ee641, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1023529860
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2520,7 +2462,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1029968619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2531,14 +2473,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 33c47c1cf0c5df442a29811d9bfe0833, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 00401195bcb33a4419a3844d203ee641, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1029968622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2590,7 +2531,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1072284650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2601,14 +2542,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5f907f8db5abf10408e55592531bd4e8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: f20628cc00c26ee45aec1a4d124787d8, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1072284653
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2703,10 +2643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
-  manaText: {fileID: 0}
-  attackText: {fileID: 0}
-  healthText: {fileID: 0}
 --- !u!1 &1191939475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2751,7 +2687,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1191939475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2762,14 +2698,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5f907f8db5abf10408e55592531bd4e8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: f20628cc00c26ee45aec1a4d124787d8, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1191939478
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2821,7 +2756,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1200652518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2832,14 +2767,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 33c47c1cf0c5df442a29811d9bfe0833, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 00401195bcb33a4419a3844d203ee641, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1200652521
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2891,7 +2825,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1238853748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2902,14 +2836,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5f907f8db5abf10408e55592531bd4e8, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: f20628cc00c26ee45aec1a4d124787d8, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1238853751
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2961,7 +2894,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1272152810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -2972,14 +2905,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 33c47c1cf0c5df442a29811d9bfe0833, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 00401195bcb33a4419a3844d203ee641, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1272152813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3645,10 +3577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
-  manaText: {fileID: 0}
-  attackText: {fileID: 0}
-  healthText: {fileID: 0}
 --- !u!1 &1807921401
 GameObject:
   m_ObjectHideFlags: 0
@@ -3843,7 +3771,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1929164790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -3854,14 +3782,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 79cf9be764fe1bf4f9920d8380ea7c44, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: aa7f3cb9d5536ba4ab3cf51a0a5d61ff, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &1929164793
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4063,7 +3990,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2034686694}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -4074,14 +4001,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 33c47c1cf0c5df442a29811d9bfe0833, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: 00401195bcb33a4419a3844d203ee641, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &2034686697
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4098,8 +4024,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2046579323}
   - component: {fileID: 2046579325}
-  - component: {fileID: 2046579324}
   - component: {fileID: 2046579326}
+  - component: {fileID: 2046579324}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -4134,7 +4060,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2046579322}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -4145,14 +4071,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 79cf9be764fe1bf4f9920d8380ea7c44, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: aa7f3cb9d5536ba4ab3cf51a0a5d61ff, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &2046579325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4171,10 +4096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 11400000, guid: 100222fcefb5a7341ab5b55ab6409429, type: 2}
-  manaText: {fileID: 0}
-  attackText: {fileID: 0}
-  healthText: {fileID: 0}
 --- !u!1 &2144899133
 GameObject:
   m_ObjectHideFlags: 0
@@ -4219,7 +4140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2144899133}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -4230,14 +4151,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 79cf9be764fe1bf4f9920d8380ea7c44, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_Texture: {fileID: 2800000, guid: aa7f3cb9d5536ba4ab3cf51a0a5d61ff, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!222 &2144899136
 CanvasRenderer:
   m_ObjectHideFlags: 0
