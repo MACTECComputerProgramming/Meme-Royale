@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Lamp
   m_EditorClassIdentifier: Assembly-CSharp::Card
   artwork: {fileID: 0}
-  manaCost: 1
-  attack: 2
-  health: 3
+  manaCost: 4
+  attack: 5
+  health: 2

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Moth
   m_EditorClassIdentifier: Assembly-CSharp::Card
   artwork: {fileID: 0}
-  manaCost: 6
-  attack: 3
-  health: 9
+  manaCost: 7
+  attack: 2
+  health: 89

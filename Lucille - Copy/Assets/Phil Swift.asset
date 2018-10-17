@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Card
   artwork: {fileID: 0}
   manaCost: 1
-  attack: 6
-  health: 3
+  attack: 7
+  health: 9

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Ugandan Knuckles
   m_EditorClassIdentifier: Assembly-CSharp::Card
   artwork: {fileID: 0}
-  manaCost: 2
-  attack: 5
-  health: 2
+  manaCost: 4
+  attack: 2
+  health: 5

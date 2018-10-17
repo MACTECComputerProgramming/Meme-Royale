@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Yodel Boy
   m_EditorClassIdentifier: Assembly-CSharp::Card
   artwork: {fileID: 0}
-  manaCost: 7
-  attack: 12
-  health: 8
+  manaCost: 8
+  attack: 5
+  health: 4

@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 59507861}
   - component: {fileID: 59507862}
   - component: {fileID: 59507860}
+  - component: {fileID: 59507863}
   m_Layer: 5
   m_Name: Dat boi
   m_TagString: Untagged
@@ -271,6 +272,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &59507863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59507858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984305764ceac6541973ae097c85d140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 229c98e8ce778204aba5ced1abe665ba, type: 2}
+  manaText: {fileID: 1786173827}
+  attackText: {fileID: 140018632}
+  healthText: {fileID: 1168950228}
 --- !u!1 &101065582
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +529,7 @@ GameObject:
   - component: {fileID: 164936399}
   - component: {fileID: 164936400}
   - component: {fileID: 164936398}
+  - component: {fileID: 164936401}
   m_Layer: 5
   m_Name: Phil swift
   m_TagString: Untagged
@@ -585,6 +602,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &164936401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 164936396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984305764ceac6541973ae097c85d140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 9c7be113358d21e4b9bc9331cf04f03a, type: 2}
+  manaText: {fileID: 579002492}
+  attackText: {fileID: 1691467748}
+  healthText: {fileID: 49917166}
 --- !u!1 &197365555
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +772,7 @@ GameObject:
   - component: {fileID: 233174571}
   - component: {fileID: 233174572}
   - component: {fileID: 233174570}
+  - component: {fileID: 233174573}
   m_Layer: 5
   m_Name: Moth
   m_TagString: Untagged
@@ -812,6 +845,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &233174573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 233174568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984305764ceac6541973ae097c85d140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: c374831679890804db800c364d643a7d, type: 2}
+  manaText: {fileID: 214406186}
+  attackText: {fileID: 1355075089}
+  healthText: {fileID: 2001091306}
 --- !u!1 &270047656
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +946,7 @@ GameObject:
   - component: {fileID: 271838052}
   - component: {fileID: 271838053}
   - component: {fileID: 271838051}
+  - component: {fileID: 271838054}
   m_Layer: 5
   m_Name: Lamp
   m_TagString: Untagged
@@ -970,6 +1019,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &271838054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 271838049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984305764ceac6541973ae097c85d140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 4056876aeb45d1c49ba9c34bfec5fe1c, type: 2}
+  manaText: {fileID: 1879266074}
+  attackText: {fileID: 1962969016}
+  healthText: {fileID: 322428231}
 --- !u!1 &322428229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,6 +1922,7 @@ GameObject:
   - component: {fileID: 645158969}
   - component: {fileID: 645158970}
   - component: {fileID: 645158968}
+  - component: {fileID: 645158971}
   m_Layer: 5
   m_Name: Yodel boy
   m_TagString: Untagged
@@ -1930,6 +1995,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &645158971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 645158966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984305764ceac6541973ae097c85d140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: aee7529e9850c7f4aabcf8e6c173a136, type: 2}
+  manaText: {fileID: 270047658}
+  attackText: {fileID: 1807921403}
+  healthText: {fileID: 1761658962}
 --- !u!1 &796280738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,6 +2021,7 @@ GameObject:
   - component: {fileID: 796280741}
   - component: {fileID: 796280742}
   - component: {fileID: 796280740}
+  - component: {fileID: 796280743}
   m_Layer: 5
   m_Name: 'TEL '
   m_TagString: Untagged
@@ -2013,6 +2094,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &796280743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 796280738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984305764ceac6541973ae097c85d140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 97505411dbdff5f4894182d54153bb0b, type: 2}
+  manaText: {fileID: 380445769}
+  attackText: {fileID: 1371292475}
+  healthText: {fileID: 883103949}
 --- !u!1 &861366862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,6 +2373,7 @@ GameObject:
   - component: {fileID: 1017508135}
   - component: {fileID: 1017508136}
   - component: {fileID: 1017508134}
+  - component: {fileID: 1017508137}
   m_Layer: 5
   m_Name: Shrek
   m_TagString: Untagged
@@ -2349,6 +2446,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f956d7281ad9ea34e88eefb695f1162e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1017508137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017508132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984305764ceac6541973ae097c85d140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: 035ad6b1a826d3a4ebf6858c4f4179be, type: 2}
+  manaText: {fileID: 371134093}
+  attackText: {fileID: 101065584}
+  healthText: {fileID: 1407269020}
 --- !u!1 &1023529857
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,9 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Dat boi
   m_EditorClassIdentifier: Assembly-CSharp::Card
-  name: Dat boi
-  description: 
   artwork: {fileID: 0}
-  manaCost: 3
-  attack: 3
-  health: 2
+  manaCost: 2
+  attack: 5
+  health: 78
