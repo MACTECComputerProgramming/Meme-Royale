@@ -6,10 +6,6 @@ using UnityEngine.UI;
 public class carddisplay : MonoBehaviour {
     public Card card;
 
-    public Text nameText;
-
-    public Image artworkImage;
-
     public Text manaText;
     public Text attackText;
     public Text healthText;
@@ -18,6 +14,9 @@ public class carddisplay : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        manaText.text = card.manaCost.ToString();
+        attackText.text = card.attack.ToString();
+        healthText.text = card.health.ToString();
 	}
 
 

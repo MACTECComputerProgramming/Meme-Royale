@@ -4,9 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
 public class Card : ScriptableObject {
 
-    public string name;
-    public string description;
-
     public Sprite artwork;
 
     public int manaCost;
@@ -15,6 +12,6 @@ public class Card : ScriptableObject {
 
     public void Print()
     {
-        Debug.Log(name + "; " + attack + " The card costs: " + manaCost);
+        Debug.Log("; " + " The card costs: " + manaCost);
     }
 }
