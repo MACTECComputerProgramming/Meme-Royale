@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &49917167
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 59507862}
   - component: {fileID: 59507860}
   - component: {fileID: 59507863}
+  - component: {fileID: 59507864}
   m_Layer: 5
   m_Name: Dat boi
   m_TagString: Untagged
@@ -287,6 +288,17 @@ MonoBehaviour:
   manaText: {fileID: 1786173827}
   attackText: {fileID: 140018632}
   healthText: {fileID: 1168950228}
+--- !u!114 &59507864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59507858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14d2046940d54a4f9f1f7c9ce595942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &101065582
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +366,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &101065585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -499,7 +511,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &140018633
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -753,7 +765,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &214406187
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -927,7 +939,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &270047659
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1101,7 +1113,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &322428232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1176,7 +1188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &371134094
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1251,7 +1263,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &380445770
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1691,7 +1703,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &579002493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2023,7 +2035,7 @@ GameObject:
   - component: {fileID: 796280740}
   - component: {fileID: 796280743}
   m_Layer: 5
-  m_Name: 'TEL '
+  m_Name: Knuckles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2245,7 +2257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &883103950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2736,7 +2748,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1168950229
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3098,7 +3110,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1355075090
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3173,7 +3185,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1371292476
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3378,7 +3390,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1407269021
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3519,7 +3531,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1691467749
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3594,7 +3606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1761658963
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3670,7 +3682,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1786173828
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3756,7 +3768,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1807921404
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3831,7 +3843,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1879266075
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3975,7 +3987,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &1962969017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4050,7 +4062,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30
+  m_Text: 
 --- !u!222 &2001091307
 CanvasRenderer:
   m_ObjectHideFlags: 0
