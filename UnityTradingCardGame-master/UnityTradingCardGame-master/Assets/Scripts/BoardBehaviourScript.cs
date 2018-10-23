@@ -7,12 +7,12 @@ public class BoardBehaviourScript : MonoBehaviour
     
     public static BoardBehaviourScript instance;
     public UnityEngine.UI.Text winnertext;
-    public Transform MYDeckPos;
-    public Transform MyHandPos;
-    public Transform MyTablePos;
+    public Transform P1DeckPos;
+    public Transform P1HandPos;
+    public Transform P1TablePos;
 
-    public Transform AIDeckPos;
-    public Transform AIHandPos;
+    public Transform P2DeckPos;
+    public Transform P2HandPos;
     public Transform AITablePos;
 
     public List<GameObject> MyDeckCards = new List<GameObject>();
@@ -107,7 +107,7 @@ public class BoardBehaviourScript : MonoBehaviour
             GameObject tempCard = MyDeckCards[random];
 
             //tempCard.transform.position = MyHandPos.position;
-            tempCard.GetComponent<CardBehaviourScript>().newPos = MyHandPos.position;
+            tempCard.GetComponent<CardBehaviourScript>().newPos = P1HandPos.position;
             tempCard.GetComponent<CardBehaviourScript>().SetCardStatus(CardBehaviourScript.CardStatus.InHand);
 
             MyDeckCards.Remove(tempCard);
@@ -119,7 +119,7 @@ public class BoardBehaviourScript : MonoBehaviour
             int random = Random.Range(0, AIDeckCards.Count);
             GameObject tempCard = AIDeckCards[random];
 
-            tempCard.transform.position = AIHandPos.position;
+            tempCard.transform.position = P2HandPos.position;
             tempCard.GetComponent<CardBehaviourScript>().SetCardStatus(CardBehaviourScript.CardStatus.InHand);
 
             AIDeckCards.Remove(tempCard);
@@ -218,7 +218,7 @@ public class BoardBehaviourScript : MonoBehaviour
 
             if (c.cardStatus == CardBehaviourScript.CardStatus.InDeck)
             {
-                c.newPos = AIDeckPos.position + new Vector3(Random.value, Random.value, Random.value);
+                c.newPos = P2DeckPos.position + new Vector3(Random.value, Random.value, Random.value);
             }
         }
     }
@@ -231,14 +231,14 @@ public class BoardBehaviourScript : MonoBehaviour
         foreach (GameObject card in MyHandCards)
         {
             int numberOfCards = MyHandCards.Count;
-            card.GetComponent<CardBehaviourScript>().newPos = MyHandPos.position + new Vector3(-numberOfCards / 2 + space, 0, 0);
+            card.GetComponent<CardBehaviourScript>().newPos = P1HandPos.position + new Vector3(-numberOfCards / 2 + space, 0, 0);
             space += gap;
         }
 
         foreach (GameObject card in AIHandCards)
         {
             int numberOfCards = AIHandCards.Count;
-            card.GetComponent<CardBehaviourScript>().newPos = AIHandPos.position + new Vector3(-numberOfCards / 2 + space2, 0, 0);
+            card.GetComponent<CardBehaviourScript>().newPos = P2HandPos.position + new Vector3(-numberOfCards / 2 + space2, 0, 0);
             space2 += gap;
         }
     }
@@ -252,7 +252,7 @@ public class BoardBehaviourScript : MonoBehaviour
         {
             int numberOfCards = MyTableCards.Count;
             //card.transform.position = myTablePos.position + new Vector3(-numberOfCards + space - 2,0,0);
-            card.GetComponent<CardBehaviourScript>().newPos = MyTablePos.position + new Vector3(-numberOfCards + space - 2, 0, 0);
+            card.GetComponent<CardBehaviourScript>().newPos = P1TablePos.position + new Vector3(-numberOfCards + space - 2, 0, 0);
             space += gap;
         }
 
@@ -270,7 +270,7 @@ public class BoardBehaviourScript : MonoBehaviour
         if (card.team == CardBehaviourScript.Team.My && MyMana - card.mana >= 0 && MyTableCards.Count < 10)
         {
             //card.gameObject.transform.position = MyTablePos.position;
-            card.GetComponent<CardBehaviourScript>().newPos = MyTablePos.position;
+            card.GetComponent<CardBehaviourScript>().newPos = P1TablePos.position;
 
             MyHandCards.Remove(card.gameObject);
             MyTableCards.Add(card.gameObject);
@@ -433,238 +433,9 @@ public class BoardBehaviourScript : MonoBehaviour
         HandPositionUpdate();
         TablePositionUpdate();
 
-        OnNewTurn();
+       
     }
-    void OnNewTurn()
-    {
-        UpdateGame();
-
-        if (turn == Turn.AITurn)
-            AI_Think();
-        //Invoke("AI_Think", 5.0f);
-    }
-    void AI_Think()
-    {
-        if (AILEVEL == 0)
-        {
-            if (turn == Turn.AITurn)
-            {
-                Invoke("RendomActions", 2.0f);
-            }
-        }
-        else if (AILEVEL > 0)
-        {
-            if (turn == Turn.AITurn)
-            {
-                Invoke("AIthink", 2.0f);
-            }
-        }
-    }
-    void AIthink()
-    {
-        AIGameState.AllStates.Clear();// = new List<AIGameState>();
-        AIGetPlacing();
-        AIGetAttacks();
-        EndTurn();
-    }
-    void RendomActions()
-    {
-        #region placing cards
-        //float chanceToPlace = Random.value;
-
-        if (AIHandCards.Count == 0)
-        {
-            EndTurn();
-        }
-        else
-        {
-            PlaceRandomCard(CardBehaviourScript.Team.AI);
-        }
-        #endregion
-        #region attacking
-        Hashtable attacks = new Hashtable();
-        foreach (GameObject Card in AITableCards)
-        {
-            CardBehaviourScript card = Card.GetComponent<CardBehaviourScript>();
-
-            if (card.canPlay)
-            {
-                float changeToAttackhero = Random.value;
-
-                if (changeToAttackhero < 0.50f)
-                {
-                    card.AttackHero(card, MyHero, true, delegate
-                    {
-                        card.canPlay = false;
-                    });
-                }
-                else if (MyTableCards.Count > 0)
-                {
-                    int random = Random.Range(0, MyTableCards.Count);
-                    GameObject CardToAttack = MyTableCards[random];
-
-                    attacks.Add(card, CardToAttack.GetComponent<CardBehaviourScript>());
-                }
-            }
-        }
-
-        foreach (DictionaryEntry row in attacks)
-        {
-            CardBehaviourScript tempCard = row.Key as CardBehaviourScript;
-            CardBehaviourScript temp2 = row.Value as CardBehaviourScript;
-
-            if (tempCard.cardtype == CardBehaviourScript.CardType.Monster)
-            {
-                tempCard.AttackCard(tempCard, temp2, true, delegate
-                {
-                    tempCard.canPlay = false;
-                });
-            }
-            else if (tempCard.cardtype == CardBehaviourScript.CardType.Magic)
-            {
-                tempCard.AddToMonster(tempCard, temp2,true, delegate
-                {
-                    tempCard.canPlay = false;
-                    tempCard.Destroy(tempCard);
-                });
-            }
-
-        }
-        #endregion
-    }
-    void AIGetPlacing()
-    {
-        AIGameState InitialState = new AIGameState(/*MyHandCards,*/MyTableCards,AIHandCards,AITableCards,MyHero,AIHero,maxMana,MyMana,AIMana,turn,null);
-        InitialState.GetAllPlacingAction();
-        //Find Best Score
-        float MaxScore = float.MinValue;
-        AIGameState BestState = new AIGameState();
-        foreach (AIGameState item in AIGameState.AllStates)
-        {
-            if (item.State_Score > MaxScore)
-            {
-                MaxScore = item.State_Score;
-                BestState = item;
-            }
-        }
-        int count = BestState.Actions.Count;
-        //GetActions
-        for (int i = 0; i < count; i++)
-        {
-            AIGameState.Action a;
-            a = BestState.Actions.Dequeue();
-            if (a.OpCode == 0)
-            {
-
-                foreach (var item in AIHandCards)
-                {
-                    if (item.GetComponent<CardBehaviourScript>()._name == a.Card1)
-                    {
-                        PlaceCard(item.GetComponent<CardBehaviourScript>());
-                        break;
-                    }
-                }
-            }
-        }
-        AIGameState.AllStates.Clear();
-    }
-    void AIGetAttacks()
-    {
-        AIGameState InitialState = new AIGameState(/*MyHandCards,*/MyTableCards, AIHandCards, AITableCards, MyHero, AIHero, maxMana, MyMana, AIMana, turn,null);
-        InitialState.GetAllAttackingActions(AILEVEL);
-        //Find Best Score
-        float MaxScore = float.MinValue;
-        AIGameState BestState = new AIGameState();
-        foreach (AIGameState item in AIGameState.AllStates)
-        {
-            if (item.State_Score > MaxScore)
-            {
-                MaxScore = item.State_Score;
-                BestState = item;
-            }
-        }
-        //Debug.Log("Best choice Index" + BestState.Index);
-        int count = BestState.Actions.Count;
-        //GetActions
-        for (int i = 0; i < count; i++)
-        {
-            AIGameState.Action a;
-            a = BestState.Actions.Dequeue();
-            if (a.OpCode == 1)
-            {
-                foreach (var item in AITableCards)//Find Card1
-                {
-                    if (item.GetComponent<CardBehaviourScript>()._name == a.Card1)
-                    {
-                        currentCard = item.GetComponent<CardBehaviourScript>();
-                        break;
-                    }
-                }
-                foreach (var item in MyTableCards)//Find Card2
-                {
-                    if (item.GetComponent<CardBehaviourScript>()._name == a.Card2)
-                    {
-                        targetCard = item.GetComponent<CardBehaviourScript>();
-                        break;
-                    }
-                }
-                if (currentCard != null && targetCard != null)//MakeAction
-                {
-                    currentCard.AttackCard(currentCard, targetCard, true, delegate
-                    {
-                        currentCard.canPlay = false;
-                    });
-                }
-            }
-            else if (a.OpCode == 2)
-            {
-                foreach (var item in AITableCards)//Find Card1
-                {
-                    if (item.GetComponent<CardBehaviourScript>()._name == a.Card1)
-                    {
-                        currentCard = item.GetComponent<CardBehaviourScript>();
-                        break;
-                    }
-                }
-                if (a.Hero == "MyHero")
-                {
-                    targetHero = MyHero;
-                }
-                if (currentCard != null && targetHero != null)
-                {
-                    currentCard.AttackHero(currentCard, MyHero, true, delegate
-                    {
-                        currentCard.canPlay = false;
-                    });
-                }
-            }else if (a.OpCode == 3)
-            {
-                foreach (var item in AITableCards)//Find Card1
-                {
-                    if (item.GetComponent<CardBehaviourScript>()._name == a.Card1)
-                    {
-                        currentCard = item.GetComponent<CardBehaviourScript>();
-                        break;
-                    }
-                }
-                foreach (var item in MyTableCards)//Find Card2
-                {
-                    if (item.GetComponent<CardBehaviourScript>()._name == a.Card2)
-                    {
-                        targetCard = item.GetComponent<CardBehaviourScript>();
-                        break;
-                    }
-                }
-                if (currentCard != null && targetCard != null)//MakeAction
-                {
-                    currentCard.AddToMonster(currentCard, targetCard, true, delegate
-                    {
-                        currentCard.Destroy(currentCard);
-                    });
-                }
-            }
-        }
-        //AIGameState.AllStates=new List< AIGameState > ();
+    
     }
     void OnTriggerEnter(Collider Obj)
     {
