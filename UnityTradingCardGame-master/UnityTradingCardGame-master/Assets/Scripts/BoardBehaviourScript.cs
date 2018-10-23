@@ -208,7 +208,7 @@ public class BoardBehaviourScript : MonoBehaviour
 
             if (c.cardStatus == CardBehaviourScript.CardStatus.InDeck)
             {
-                c.newPos = MYDeckPos.position + new Vector3(Random.value, Random.value, Random.value);
+                c.newPos = P1DeckPos.position + new Vector3(Random.value, Random.value, Random.value);
             }
         }
 
@@ -434,7 +434,7 @@ public class BoardBehaviourScript : MonoBehaviour
         TablePositionUpdate();
 
        
-    }
+    
     
     }
     void OnTriggerEnter(Collider Obj)
