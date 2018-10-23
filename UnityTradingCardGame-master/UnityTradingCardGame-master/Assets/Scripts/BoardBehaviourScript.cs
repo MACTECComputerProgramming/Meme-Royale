@@ -13,30 +13,30 @@ public class BoardBehaviourScript : MonoBehaviour
 
     public Transform P2DeckPos;
     public Transform P2HandPos;
-    public Transform AITablePos;
+    public Transform P2TablePos;
 
-    public List<GameObject> MyDeckCards = new List<GameObject>();
-    public List<GameObject> MyHandCards = new List<GameObject>();
-    public List<GameObject> MyTableCards = new List<GameObject>();
+    public List<GameObject> P1DeckCards = new List<GameObject>();
+    public List<GameObject> P1HandCards = new List<GameObject>();
+    public List<GameObject> P1TableCards = new List<GameObject>();
 
-    public List<GameObject> AIDeckCards = new List<GameObject>();
-    public List<GameObject> AIHandCards = new List<GameObject>();
-    public List<GameObject> AITableCards = new List<GameObject>();
+    public List<GameObject> P2DeckCards = new List<GameObject>();
+    public List<GameObject> P2HandCards = new List<GameObject>();
+    public List<GameObject> P2TableCards = new List<GameObject>();
 
-    public TextMesh MyManaText;
-    public TextMesh AIManaText;
+    public TextMesh P1ManaText;
+    public TextMesh P2ManaText;
 
-    public HeroBehaviourScript MyHero;
-    public HeroBehaviourScript AIHero;
+    public HeroBehaviourScript P1Hero;
+    public HeroBehaviourScript P2Hero;
 
-    public enum Turn { MyTurn, AITurn };
+    public enum Turn { P1Turn, P2Turn };
 
     #region SetStartData
-    public Turn turn = Turn.MyTurn;
+    public Turn turn = Turn.P1Turn;
 
     int maxMana = 1;
-    int MyMana = 1;
-    int AIMana = 1;
+    int P1Mana = 1;
+    int P2Mana = 1;
 
     public bool gameStarted = false;
     int turnNumber = 1;
@@ -48,7 +48,7 @@ public class BoardBehaviourScript : MonoBehaviour
     public HeroBehaviourScript targetHero;
 
     public List<Hashtable> boardHistory = new List<Hashtable>();
-    public int AILEVEL = 0;
+    public int P2LEVEL = 0;
     public LayerMask layer;
     public void AddHistory(CardGameBase a, CardGameBase b)
     {
@@ -74,10 +74,10 @@ public class BoardBehaviourScript : MonoBehaviour
             CardObject.GetComponent<Rigidbody>().isKinematic = true;
             CardBehaviourScript c = CardObject.GetComponent<CardBehaviourScript>();
 
-            if (c.team == CardBehaviourScript.Team.My)
-                MyDeckCards.Add(CardObject);
+            if (c.team == CardBehaviourScript.Team.P1)
+                P1DeckCards.Add(CardObject);
             else
-                AIDeckCards.Add(CardObject);
+                P2DeckCards.Add(CardObject);
         }
         //Update Deck Cards Position
         DecksPositionUpdate();
@@ -94,36 +94,36 @@ public class BoardBehaviourScript : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            DrawCardFromDeck(CardBehaviourScript.Team.My);
-            DrawCardFromDeck(CardBehaviourScript.Team.AI);
+            DrawCardFromDeck(CardBehaviourScript.Team.P1);
+            DrawCardFromDeck(CardBehaviourScript.Team.P2);
         }
     }
     public void DrawCardFromDeck(CardBehaviourScript.Team team)
     {
 
-        if (team == CardBehaviourScript.Team.My && MyDeckCards.Count != 0 && MyHandCards.Count < 10)
+        if (team == CardBehaviourScript.Team.P1 && P1DeckCards.Count != 0 && P1HandCards.Count < 10)
         {
-            int random = Random.Range(0, MyDeckCards.Count);
-            GameObject tempCard = MyDeckCards[random];
+            int random = Random.Range(0, P1DeckCards.Count);
+            GameObject tempCard = P1DeckCards[random];
 
-            //tempCard.transform.position = MyHandPos.position;
+            //tempCard.transform.position = P1HandPos.position;
             tempCard.GetComponent<CardBehaviourScript>().newPos = P1HandPos.position;
             tempCard.GetComponent<CardBehaviourScript>().SetCardStatus(CardBehaviourScript.CardStatus.InHand);
 
-            MyDeckCards.Remove(tempCard);
-            MyHandCards.Add(tempCard);
+            P1DeckCards.Remove(tempCard);
+            P1HandCards.Add(tempCard);
         }
 
-        if (team == CardBehaviourScript.Team.AI && AIDeckCards.Count != 0 && AIHandCards.Count < 10)
+        if (team == CardBehaviourScript.Team.P2 && P2DeckCards.Count != 0 && P2HandCards.Count < 10)
         {
-            int random = Random.Range(0, AIDeckCards.Count);
-            GameObject tempCard = AIDeckCards[random];
+            int random = Random.Range(0, P2DeckCards.Count);
+            GameObject tempCard = P2DeckCards[random];
 
             tempCard.transform.position = P2HandPos.position;
             tempCard.GetComponent<CardBehaviourScript>().SetCardStatus(CardBehaviourScript.CardStatus.InHand);
 
-            AIDeckCards.Remove(tempCard);
-            AIHandCards.Add(tempCard);
+            P2DeckCards.Remove(tempCard);
+            P2HandCards.Add(tempCard);
         }
 
         UpdateGame();
@@ -152,20 +152,20 @@ public class BoardBehaviourScript : MonoBehaviour
                     //do whatever......
                     //Debug.Log(hit.point);
                     if(BoardBehaviourScript.instance.currentHero)
-                    drawMyLine(BoardBehaviourScript.instance.currentHero.transform.position, hit.point, Color.blue, 0.1f);
+                    drawP1Line(BoardBehaviourScript.instance.currentHero.transform.position, hit.point, Color.blue, 0.1f);
                     if (BoardBehaviourScript.instance.currentCard)
-                    drawMyLine(BoardBehaviourScript.instance.currentCard.transform.position, hit.point, Color.blue, 0.1f);
+                    drawP1Line(BoardBehaviourScript.instance.currentCard.transform.position, hit.point, Color.blue, 0.1f);
                 }
             }
         }
 
-        if (MyHero.health <= 0)
-            EndGame(AIHero);
-        if (AIHero.health <= 0)
-            EndGame(MyHero);
+        if (P1Hero.health <= 0)
+            EndGame(P2Hero);
+        if (P2Hero.health <= 0)
+            EndGame(P1Hero);
 
     }
-    void drawMyLine(Vector3 start, Vector3 end, Color color, float duration = 0.2f)
+    void drawP1Line(Vector3 start, Vector3 end, Color color, float duration = 0.2f)
     {
 
         StartCoroutine(drawLine(start, end, color, duration));
@@ -173,10 +173,10 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     IEnumerator drawLine(Vector3 start, Vector3 end, Color color, float duration = 0.2f)
     {
-        GameObject myLine = new GameObject();
-        myLine.transform.position = start;
-        myLine.AddComponent<LineRenderer>();
-        LineRenderer lr = myLine.GetComponent<LineRenderer>();
+        GameObject P1Line = new GameObject();
+        P1Line.transform.position = start;
+        P1Line.AddComponent<LineRenderer>();
+        LineRenderer lr = P1Line.GetComponent<LineRenderer>();
         lr.material = new Material(Shader.Find("Particles/Additive"));
         lr.SetColors(color, color);
         lr.SetWidth(0.1f, 0.1f);
@@ -185,24 +185,24 @@ public class BoardBehaviourScript : MonoBehaviour
         lr.SetPosition(1,(( (-start+ end)*0.5f+start))+new Vector3(0,0,-5.0f));
         lr.SetPosition(2, end);
         yield return new WaitForSeconds(duration);
-        GameObject.Destroy(myLine);
+        GameObject.Destroy(P1Line);
     }
     void UpdateGame()
     {
-        MyManaText.text = MyMana.ToString() + "/" + maxMana;
-        AIManaText.text = AIMana.ToString() + "/" + maxMana;
+        P1ManaText.text = P1Mana.ToString() + "/" + maxMana;
+        P2ManaText.text = P2Mana.ToString() + "/" + maxMana;
 
-        if (MyHero.health <= 0)
-            EndGame(AIHero);
-        if (AIHero.health <= 0)
-            EndGame(MyHero);
+        if (P1Hero.health <= 0)
+            EndGame(P2Hero);
+        if (P2Hero.health <= 0)
+            EndGame(P1Hero);
 
         //UpdateBoard();
     }
 
     void DecksPositionUpdate()
     {
-        foreach (GameObject CardObject in MyDeckCards)
+        foreach (GameObject CardObject in P1DeckCards)
         {
             CardBehaviourScript c = CardObject.GetComponent<CardBehaviourScript>();
 
@@ -212,7 +212,7 @@ public class BoardBehaviourScript : MonoBehaviour
             }
         }
 
-        foreach (GameObject CardObject in AIDeckCards)
+        foreach (GameObject CardObject in P2DeckCards)
         {
             CardBehaviourScript c = CardObject.GetComponent<CardBehaviourScript>();
 
@@ -228,16 +228,16 @@ public class BoardBehaviourScript : MonoBehaviour
         float space2 = 0f;
         float gap = 1.3f;
 
-        foreach (GameObject card in MyHandCards)
+        foreach (GameObject card in P1HandCards)
         {
-            int numberOfCards = MyHandCards.Count;
+            int numberOfCards = P1HandCards.Count;
             card.GetComponent<CardBehaviourScript>().newPos = P1HandPos.position + new Vector3(-numberOfCards / 2 + space, 0, 0);
             space += gap;
         }
 
-        foreach (GameObject card in AIHandCards)
+        foreach (GameObject card in P2HandCards)
         {
-            int numberOfCards = AIHandCards.Count;
+            int numberOfCards = P2HandCards.Count;
             card.GetComponent<CardBehaviourScript>().newPos = P2HandPos.position + new Vector3(-numberOfCards / 2 + space2, 0, 0);
             space2 += gap;
         }
@@ -248,32 +248,32 @@ public class BoardBehaviourScript : MonoBehaviour
         float space2 = 0f;
         float gap = 3;
 
-        foreach (GameObject card in MyTableCards)
+        foreach (GameObject card in P1TableCards)
         {
-            int numberOfCards = MyTableCards.Count;
-            //card.transform.position = myTablePos.position + new Vector3(-numberOfCards + space - 2,0,0);
+            int numberOfCards = P1TableCards.Count;
+            //card.transform.position = P1TablePos.position + new Vector3(-numberOfCards + space - 2,0,0);
             card.GetComponent<CardBehaviourScript>().newPos = P1TablePos.position + new Vector3(-numberOfCards + space - 2, 0, 0);
             space += gap;
         }
 
-        foreach (GameObject card in AITableCards)
+        foreach (GameObject card in P2TableCards)
         {
-            int numberOfCards = AITableCards.Count;
+            int numberOfCards = P2TableCards.Count;
             //card.transform.position = AITablePos.position + new Vector3(-numberOfCards + space2,0,0);
-            card.GetComponent<CardBehaviourScript>().newPos = AITablePos.position + new Vector3(-numberOfCards + space2, 0, 0);
+            card.GetComponent<CardBehaviourScript>().newPos = P2TablePos.position + new Vector3(-numberOfCards + space2, 0, 0);
             space2 += gap;
         }
     }
 
     public void PlaceCard(CardBehaviourScript card)
     {
-        if (card.team == CardBehaviourScript.Team.My && MyMana - card.mana >= 0 && MyTableCards.Count < 10)
+        if (card.team == CardBehaviourScript.Team.P1 && P1Mana - card.mana >= 0 && P1TableCards.Count < 10)
         {
-            //card.gameObject.transform.position = MyTablePos.position;
+            //card.gameObject.transform.position = P1TablePos.position;
             card.GetComponent<CardBehaviourScript>().newPos = P1TablePos.position;
 
-            MyHandCards.Remove(card.gameObject);
-            MyTableCards.Add(card.gameObject);
+            P1HandCards.Remove(card.gameObject);
+            P1TableCards.Add(card.gameObject);
 
             card.SetCardStatus(CardBehaviourScript.CardStatus.OnTable);
             //PlaySound(cardDrop);
@@ -287,20 +287,20 @@ public class BoardBehaviourScript : MonoBehaviour
                 }
                 else if (card.cardeffect == CardBehaviourScript.CardEffect.ToEnemies)
                 {
-                    card.AddToEnemies(card,AITableCards,true, delegate { card.Destroy(card); });
+                    card.AddToEnemies(card,P2TableCards,true, delegate { card.Destroy(card); });
                 }
             }
 
-            MyMana -= card.mana;
+            P1Mana -= card.mana;
         }
 
-        if (card.team == CardBehaviourScript.Team.AI && AIMana - card.mana >= 0 && AITableCards.Count < 10)
+        if (card.team == CardBehaviourScript.Team.P2 && P2Mana - card.mana >= 0 && P2TableCards.Count < 10)
         {
             //card.gameObject.transform.position = AITablePos.position;
-            card.GetComponent<CardBehaviourScript>().newPos = AITablePos.position;
+            card.GetComponent<CardBehaviourScript>().newPos = P2TablePos.position;
 
-            AIHandCards.Remove(card.gameObject);
-            AITableCards.Add(card.gameObject);
+            P2HandCards.Remove(card.gameObject);
+            P2TableCards.Add(card.gameObject);
 
             card.SetCardStatus(CardBehaviourScript.CardStatus.OnTable);
             //PlaySound(cardDrop);
@@ -314,11 +314,11 @@ public class BoardBehaviourScript : MonoBehaviour
                 }
                 else if (card.cardeffect == CardBehaviourScript.CardEffect.ToEnemies)
                 {
-                    card.AddToEnemies(card,MyTableCards,true, delegate { card.Destroy(card); });
+                    card.AddToEnemies(card,P1TableCards,true, delegate { card.Destroy(card); });
                 }
             }
 
-            AIMana -= card.mana;
+            P2Mana -= card.mana;
         }
 
         TablePositionUpdate();
@@ -327,18 +327,18 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     public void PlaceRandomCard(CardBehaviourScript.Team team)
     {
-        if (team == CardBehaviourScript.Team.My && MyHandCards.Count != 0)
+        if (team == CardBehaviourScript.Team.P1 && P1HandCards.Count != 0)
         {
-            int random = Random.Range(0, MyHandCards.Count);
-            GameObject tempCard = MyHandCards[random];
+            int random = Random.Range(0, P1HandCards.Count);
+            GameObject tempCard = P1HandCards[random];
 
             PlaceCard(tempCard.GetComponent<CardBehaviourScript>());
         }
 
-        if (team == CardBehaviourScript.Team.AI && AIHandCards.Count != 0)
+        if (team == CardBehaviourScript.Team.P2 && P2HandCards.Count != 0)
         {
-            int random = Random.Range(0, AIHandCards.Count);
-            GameObject tempCard = AIHandCards[random];
+            int random = Random.Range(0, P2HandCards.Count);
+            GameObject tempCard = P2HandCards[random];
 
             PlaceCard(tempCard.GetComponent<CardBehaviourScript>());
         }
@@ -351,15 +351,15 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     public void EndGame(HeroBehaviourScript winner)
     {
-        if (winner == MyHero)
+        if (winner == P1Hero)
         {
-            Debug.Log("MyHero");
+            Debug.Log("P1Hero");
             Time.timeScale = 0;
             winnertext.text = "You Won";
             //Destroy(this);
         }
 
-        if (winner == AIHero)
+        if (winner == P2Hero)
         {
             Time.timeScale = 0;
             Debug.Log("AIHero");
@@ -371,7 +371,7 @@ public class BoardBehaviourScript : MonoBehaviour
     {
         if (gameStarted)
         {
-            if (turn == Turn.MyTurn)
+            if (turn == Turn.P1Turn)
             {
                 if (GUI.Button(new Rect(Screen.width - 200, Screen.height / 2 - 50, 100, 50), "End Turn"))
                 {
@@ -404,30 +404,30 @@ public class BoardBehaviourScript : MonoBehaviour
     {
         maxMana += (turnNumber-1)%2;
         if (maxMana >= 10) maxMana = 10;
-        MyMana = maxMana;
-        AIMana = maxMana;
+        P1Mana = maxMana;
+        P2Mana = maxMana;
         turnNumber += 1;
         currentCard = new CardBehaviourScript() ;
         targetCard = new CardBehaviourScript();
         currentHero = new HeroBehaviourScript();
         targetHero = new HeroBehaviourScript();
-        foreach (GameObject card in MyTableCards)
+        foreach (GameObject card in P1TableCards)
             card.GetComponent<CardBehaviourScript>().canPlay = true;
 
-        foreach (GameObject card in AITableCards)
+        foreach (GameObject card in P2TableCards)
             card.GetComponent<CardBehaviourScript>().canPlay = true;
-        MyHero.CanAttack = true;
-        AIHero.CanAttack = true;
+        P1Hero.CanAttack = true;
+        P2Hero.CanAttack = true;
 
-        if (turn == Turn.AITurn)
+        if (turn == Turn.P2Turn)
         {
-            DrawCardFromDeck(CardBehaviourScript.Team.My);
-            turn = Turn.MyTurn;
+            DrawCardFromDeck(CardBehaviourScript.Team.P1);
+            turn = Turn.P1Turn;
         }
-        else if (turn == Turn.MyTurn)
+        else if (turn == Turn.P1Turn)
         {
-            DrawCardFromDeck(CardBehaviourScript.Team.AI);
-            turn = Turn.AITurn;
+            DrawCardFromDeck(CardBehaviourScript.Team.P2);
+            turn = Turn.P2Turn;
         }
 
         HandPositionUpdate();

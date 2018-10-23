@@ -31,8 +31,8 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
     public CardEffect cardeffect;
     public int AddedHealth;
     public int AddedAttack;
-    public enum Team { My, AI };
-    public Team team = Team.My;
+    public enum Team { P1, P2 };
+    public Team team = Team.P1;
 
     public Vector3 newPos;
 
@@ -112,7 +112,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
     }
     public void PlaceCard()
     {
-        if (BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.MyTurn && cardStatus == CardStatus.InHand && team == Team.My)
+        if (BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && cardStatus == CardStatus.InHand && team == Team.P1)
         {
             //Selected = false;
             BoardBehaviourScript.instance.PlaceCard(this);
@@ -132,7 +132,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
             BoardBehaviourScript.instance.currentCard = this;
             print("Selected card: " + _Attack + ":" + health);
         }
-        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Magic && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.MyTurn && cardStatus == CardStatus.OnTable)
+        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Magic && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && cardStatus == CardStatus.OnTable)
         {
             if (BoardBehaviourScript.instance.currentCard.cardeffect == CardEffect.ToSpecific)//Magic VS Card
             {//What Magic Card Will Do To MonsterCard
@@ -148,7 +148,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
             }
 
         }
-        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Monster && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.MyTurn && cardStatus == CardStatus.OnTable && BoardBehaviourScript.instance.currentCard!=this)//Card VS Card
+        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Monster && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && cardStatus == CardStatus.OnTable && BoardBehaviourScript.instance.currentCard!=this)//Card VS Card
         {
             //clicked opponent card on table on your turn
             if (BoardBehaviourScript.instance.currentCard != null && BoardBehaviourScript.instance.currentCard.canPlay)
@@ -166,7 +166,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
             }
             print("Cannot Attack this Target card: ");
         }
-        else if ((BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.MyTurn && BoardBehaviourScript.instance.currentHero && cardStatus == CardStatus.OnTable))//Hero VS Card
+        else if ((BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && BoardBehaviourScript.instance.currentHero && cardStatus == CardStatus.OnTable))//Hero VS Card
         {
             if (BoardBehaviourScript.instance.currentHero.CanAttack)
             {
@@ -257,10 +257,10 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
         {
             if (card.gameObject != null)
             {
-                if (card.team == CardBehaviourScript.Team.My)
-                    BoardBehaviourScript.instance.MyTableCards.Remove(card.gameObject);
-                else if (card.team == CardBehaviourScript.Team.AI)
-                    BoardBehaviourScript.instance.AITableCards.Remove(card.gameObject);
+                if (card.team == CardBehaviourScript.Team.P1)
+                    BoardBehaviourScript.instance.P1TableCards.Remove(card.gameObject);
+                else if (card.team == CardBehaviourScript.Team.P2)
+                    BoardBehaviourScript.instance.P2TableCards.Remove(card.gameObject);
 
 
                 //BoardBehaviourScript.instance.PlaySound(BoardBehaviourScript.instance.cardDestroy);
@@ -302,11 +302,11 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
     {
         if (magic.canPlay)
         {
-            foreach (var target in BoardBehaviourScript.instance.AITableCards)
+            foreach (var target in BoardBehaviourScript.instance.P2TableCards)
             {
                 AddToMonster(magic, target.GetComponent<CardBehaviourScript>(), addhistory, delegate { });
             }
-            foreach (var target in BoardBehaviourScript.instance.MyTableCards)
+            foreach (var target in BoardBehaviourScript.instance.P1TableCards)
             {
                 AddToMonster(magic, target.GetComponent<CardBehaviourScript>(), addhistory, delegate { });
             }
