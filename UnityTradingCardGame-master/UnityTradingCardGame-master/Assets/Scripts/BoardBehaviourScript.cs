@@ -379,6 +379,14 @@ public class BoardBehaviourScript : MonoBehaviour
                 }
             }
 
+            if (turn == Turn.P2Turn)
+            {
+                if (GUI.Button(new Rect(Screen.width - 200, Screen.height / 2 - 50, 100, 50), "End Turn"))
+                {
+                    EndTurn();
+                }
+            }
+
             GUI.Label(new Rect(Screen.width-200, Screen.height / 2 - 100, 100, 50), "Turn: " + turn + " Turn Number: " + turnNumber.ToString());
 
             foreach (Hashtable history in boardHistory)
