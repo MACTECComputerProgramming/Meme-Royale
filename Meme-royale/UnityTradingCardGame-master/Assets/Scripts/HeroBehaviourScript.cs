@@ -67,7 +67,7 @@ public class HeroBehaviourScript : CardGameBase ,ICloneable
     {
         healthText.text = health.ToString();
         AttackText.text = _Attack.ToString();
-        DebugText.text = CanAttack ? "Ready to attack" : "Can't Attack";
+
     }
     public void AttackCard(HeroBehaviourScript attacker, CardBehaviourScript target, CustomAction action)
     {

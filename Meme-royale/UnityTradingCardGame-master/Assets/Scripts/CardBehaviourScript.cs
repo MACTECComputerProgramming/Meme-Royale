@@ -42,49 +42,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
     void Start()
     {
         distance_to_screen = Camera.main.WorldToScreenPoint(gameObject.transform.position).z - 1;
-        DescriptionText.text = description.ToString();
-
-        if (GenerateRandomeData)
-        {
-
-
-            cardtype = (CardType)Random.Range(0, 2);
-
-
-            mana = Random.Range(1, 10);
-
-            //Generate Randome Name
-            string[] characters = { "a", "b", "c", "d", "e", "f" };
-            for (int i = 0; i < 5; i++)
-                _name += characters[Random.Range(0, characters.Length)];
-            if (cardtype == CardType.Magic)
-            {
-                health = 0;
-                _Attack = 0;
-                AddedAttack = Random.Range(1, 8);
-                AddedHealth = Random.Range(1, 8);
-                cardeffect = (CardEffect)Random.Range(0, 3);
-                if (cardeffect == CardEffect.ToSpecific)
-                {
-                    DescriptionText.text = "Add " + AddedAttack + "/" + AddedHealth + "\n" + "   To Any Selected Moster";
-                }
-                else if (cardeffect == CardEffect.ToAll)
-                {
-                    DescriptionText.text = "Add " + AddedAttack + "/" + AddedHealth + "\n" + "   To ALL";
-                }
-                else if (cardeffect == CardEffect.ToEnemies)
-                {
-                    DescriptionText.text = "Add " + AddedAttack + "/" + AddedHealth + "\n" + "   To ALL Enemies";
-                }
-
-            }
-            else
-            {
-                //Generate Randome Data
-                health = Random.Range(1, 8);
-                _Attack = Random.Range(1, 8);
-            }
-        }
+        DescriptionText.text = description.ToString();      
     }
     void FixedUpdate()
     {
@@ -117,6 +75,11 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
             //Selected = false;
             BoardBehaviourScript.instance.PlaceCard(this);
         }
+        else if (BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P2Turn && cardStatus == CardStatus.InHand && team == Team.P2)
+        {
+            //Selected = false;
+            BoardBehaviourScript.instance.PlaceCard(this);
+        }
     }
     void OnMouseDown()
     {
@@ -132,6 +95,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
             BoardBehaviourScript.instance.currentCard = this;
             print("Selected card: " + _Attack + ":" + health);
         }
+        
         else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Magic && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && cardStatus == CardStatus.OnTable)
         {
             if (BoardBehaviourScript.instance.currentCard.cardeffect == CardEffect.ToSpecific)//Magic VS Card
@@ -146,9 +110,10 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
                     });
                 }
             }
+            
 
         }
-        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Monster && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && cardStatus == CardStatus.OnTable && BoardBehaviourScript.instance.currentCard!=this)//Card VS Card
+        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Monster && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P2Turn && cardStatus == CardStatus.OnTable && BoardBehaviourScript.instance.currentCard!=this)//Card VS Card
         {
             //clicked opponent card on table on your turn
             if (BoardBehaviourScript.instance.currentCard != null && BoardBehaviourScript.instance.currentCard.canPlay)
@@ -157,7 +122,25 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
                 print("Target card: " + _Attack + ":" + health);
                 if (BoardBehaviourScript.instance.currentCard.canPlay)
                 {
-                    AttackCard(BoardBehaviourScript.instance.currentCard, BoardBehaviourScript.instance.targetCard,true, delegate
+                    AttackCard(BoardBehaviourScript.instance.currentCard, BoardBehaviourScript.instance.targetCard, true, delegate
+                     {
+                         BoardBehaviourScript.instance.currentCard.canPlay = false;
+                     });
+                }
+                else print("Card cannot attack");
+            }
+            print("Cannot Attack this Target card: ");
+        }
+        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Monster && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && cardStatus == CardStatus.OnTable && BoardBehaviourScript.instance.currentCard != this)//Card VS Card
+        {
+            //clicked opponent card on table on your turn
+            if (BoardBehaviourScript.instance.currentCard != null && BoardBehaviourScript.instance.currentCard.canPlay)
+            {
+                BoardBehaviourScript.instance.targetCard = this;
+                print("Target card: " + _Attack + ":" + health);
+                if (BoardBehaviourScript.instance.currentCard.canPlay)
+                {
+                    AttackCard(BoardBehaviourScript.instance.currentCard, BoardBehaviourScript.instance.targetCard, true, delegate
                     {
                         BoardBehaviourScript.instance.currentCard.canPlay = false;
                     });
@@ -167,6 +150,18 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
             print("Cannot Attack this Target card: ");
         }
         else if ((BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && BoardBehaviourScript.instance.currentHero && cardStatus == CardStatus.OnTable))//Hero VS Card
+        {
+            if (BoardBehaviourScript.instance.currentHero.CanAttack)
+            {
+                BoardBehaviourScript.instance.targetCard = this;
+                print("Target card: " + _Attack + ":" + health);
+                BoardBehaviourScript.instance.currentHero.AttackCard(BoardBehaviourScript.instance.currentHero, BoardBehaviourScript.instance.targetCard, delegate
+                {
+                    BoardBehaviourScript.instance.currentHero.CanAttack = false;
+                });
+            }
+        }
+        else if ((BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P2Turn && BoardBehaviourScript.instance.currentHero && cardStatus == CardStatus.OnTable))//Hero VS Card
         {
             if (BoardBehaviourScript.instance.currentHero.CanAttack)
             {
@@ -219,7 +214,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
     }
     public void AttackCard(CardBehaviourScript attacker, CardBehaviourScript target,bool addhistory, CustomAction action)
     {
-        if (attacker.canPlay)
+        if (attacker.canPlay && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && team == CardBehaviourScript.Team.P1)
         {
             target.health -= attacker._Attack;
             attacker.health -= target._Attack;
@@ -237,6 +232,25 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
             action();
             if(addhistory)
             BoardBehaviourScript.instance.AddHistory(attacker, target);
+        }
+        else if (attacker.canPlay && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P2Turn && team == CardBehaviourScript.Team.P2)
+        {
+            target.health -= attacker._Attack;
+            attacker.health -= target._Attack;
+
+            if (target.health <= 0)
+            {
+                Destroy(target);
+            }
+
+            if (attacker.health <= 0)
+            {
+                attacker.Destroy(attacker);
+            }
+
+            action();
+            if (addhistory)
+                BoardBehaviourScript.instance.AddHistory(attacker, target);
         }
     }//Attack
     public void AttackHero(CardBehaviourScript attacker, HeroBehaviourScript target, bool addhistory, CustomAction action)

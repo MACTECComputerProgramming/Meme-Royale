@@ -151,10 +151,9 @@ public class BoardBehaviourScript : MonoBehaviour
                 {
                     //do whatever......
                     //Debug.Log(hit.point);
-                    if(BoardBehaviourScript.instance.currentHero)
-                    drawP1Line(BoardBehaviourScript.instance.currentHero.transform.position, hit.point, Color.blue, 0.1f);
+                    
                     if (BoardBehaviourScript.instance.currentCard)
-                    drawP1Line(BoardBehaviourScript.instance.currentCard.transform.position, hit.point, Color.blue, 0.1f);
+                    drawP1Line(BoardBehaviourScript.instance.currentCard.transform.position, hit.point, Color.green, 0.1f);
                 }
             }
         }
