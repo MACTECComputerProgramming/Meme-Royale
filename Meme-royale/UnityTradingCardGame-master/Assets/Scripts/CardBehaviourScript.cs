@@ -81,7 +81,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
             BoardBehaviourScript.instance.PlaceCard(this);
         }
     }
-    void OnMouseDown()
+    void OnMouseDown(CardBehaviourScript card)
     {
         if (cardStatus == CardStatus.InHand)
         {
@@ -128,7 +128,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
 
 
         }
-        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Monster && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P2Turn && cardStatus == CardStatus.OnTable && BoardBehaviourScript.instance.currentCard!=this)//Card VS Card
+        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Monster && card.team == CardBehaviourScript.Team.P2 && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P2Turn && cardStatus == CardStatus.OnTable && BoardBehaviourScript.instance.currentCard!=this)//Card VS Card
         {
             //clicked opponent card on table on your turn
             if (BoardBehaviourScript.instance.currentCard != null && BoardBehaviourScript.instance.currentCard.canPlay)
@@ -146,7 +146,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
             }
             print("Cannot Attack this Target card: ");
         }
-        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Monster && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && cardStatus == CardStatus.OnTable && BoardBehaviourScript.instance.currentCard != this)//Card VS Card
+        else if (BoardBehaviourScript.instance.currentCard && BoardBehaviourScript.instance.currentCard.cardtype == CardType.Monster && card.team == CardBehaviourScript.Team.P1 && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && cardStatus == CardStatus.OnTable && BoardBehaviourScript.instance.currentCard != this)//Card VS Card
         {
             //clicked opponent card on table on your turn
             if (BoardBehaviourScript.instance.currentCard != null && BoardBehaviourScript.instance.currentCard.canPlay)
@@ -157,7 +157,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
                 {
                     AttackCard(BoardBehaviourScript.instance.currentCard, BoardBehaviourScript.instance.targetCard, true, delegate
                     {
-                        BoardBehaviourScript.instance.currentCard.canPlay = true;
+                        BoardBehaviourScript.instance.currentCard.canPlay = false;
                     });
                 }
                 else print("Card cannot attack");
@@ -233,6 +233,7 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
         {
             target.health -= attacker._Attack;
             attacker.health -= target._Attack;
+           
 
             if (target.health <= 0)
             {
