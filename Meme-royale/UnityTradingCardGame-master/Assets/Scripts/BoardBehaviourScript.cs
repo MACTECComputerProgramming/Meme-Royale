@@ -207,7 +207,7 @@ public class BoardBehaviourScript : MonoBehaviour
 
             if (c.cardStatus == CardBehaviourScript.CardStatus.InDeck)
             {
-                c.newPos = P1DeckPos.position + new Vector3(Random.value, Random.value, Random.value);
+                c.newPos = P1DeckPos.position;
             }
         }
 
@@ -217,7 +217,7 @@ public class BoardBehaviourScript : MonoBehaviour
 
             if (c.cardStatus == CardBehaviourScript.CardStatus.InDeck)
             {
-                c.newPos = P2DeckPos.position + new Vector3(Random.value, Random.value, Random.value);
+                c.newPos = P2DeckPos.position;
             }
         }
     }
@@ -245,7 +245,7 @@ public class BoardBehaviourScript : MonoBehaviour
     {
         float space = 0f;
         float space2 = 0f;
-        float gap = 3;
+        float gap = 2;
 
         foreach (GameObject card in P1TableCards)
         {
@@ -266,7 +266,7 @@ public class BoardBehaviourScript : MonoBehaviour
 
     public void PlaceCard(CardBehaviourScript card)
     {
-        if (card.team == CardBehaviourScript.Team.P1 && P1Mana - card.mana >= 0 && P1TableCards.Count < 10)
+        if (card.team == CardBehaviourScript.Team.P1 && P1Mana - card.mana >= 0 && P1TableCards.Count < 6)
         {
             //card.gameObject.transform.position = P1TablePos.position;
             card.GetComponent<CardBehaviourScript>().newPos = P1TablePos.position;
