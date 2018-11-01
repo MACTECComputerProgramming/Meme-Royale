@@ -191,12 +191,7 @@ public class BoardBehaviourScript : MonoBehaviour
         P1ManaText.text = P1Mana.ToString() + "/" + maxMana;
         P2ManaText.text = P2Mana.ToString() + "/" + maxMana;
 
-        if (P1Hero.health <= 0)
-            EndGame(P2Hero);
-        if (P2Hero.health <= 0)
-            EndGame(P1Hero);
-
-        //UpdateBoard();
+        
     }
 
     void DecksPositionUpdate()
@@ -293,7 +288,7 @@ public class BoardBehaviourScript : MonoBehaviour
             P1Mana -= card.mana;
         }
 
-        if (card.team == CardBehaviourScript.Team.P2 && P2Mana - card.mana >= 0 && P2TableCards.Count < 10)
+        if (card.team == CardBehaviourScript.Team.P2 && P2Mana - card.mana >= 0 && P2TableCards.Count < 6)
         {
             //card.gameObject.transform.position = AITablePos.position;
             card.GetComponent<CardBehaviourScript>().newPos = P2TablePos.position;
@@ -354,7 +349,7 @@ public class BoardBehaviourScript : MonoBehaviour
         {
             Debug.Log("P1Hero");
             Time.timeScale = 0;
-            winnertext.text = "You Won";
+            winnertext.text = "Player 1 Wins!";
             //Destroy(this);
         }
 
@@ -362,7 +357,7 @@ public class BoardBehaviourScript : MonoBehaviour
         {
             Time.timeScale = 0;
             Debug.Log("AIHero");
-            winnertext.text = "You Losse";
+            winnertext.text = "Player 2 Wins!";
             //Destroy(this);
         }
     }
