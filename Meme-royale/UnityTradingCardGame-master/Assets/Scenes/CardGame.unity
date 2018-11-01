@@ -158,11 +158,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: description
-      value: Fear of Hot Cheetos
+      value: Fears Cheetos
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
@@ -170,7 +170,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
@@ -353,19 +353,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: description
-      value: Powered by LAMP
+      value: Loves LAMP
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
@@ -431,19 +431,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: description
-      value: '*Grabs Cellphone*'
+      value: '*Grabs phone*'
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2353864, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -807,15 +807,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
@@ -1009,15 +1009,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2353864, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -1236,11 +1236,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: description
-      value: Hi-Ho Kermit is here
+      value: Kermit is here
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
@@ -1248,7 +1248,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
@@ -1318,15 +1318,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
@@ -1396,15 +1396,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
@@ -1649,7 +1649,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
@@ -1657,7 +1657,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2353864, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -1896,15 +1896,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2353864, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -1966,19 +1966,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: description
-      value: Groomed to battle
+      value: Fresh Warrior
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
@@ -2078,15 +2078,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2353864, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -2148,11 +2148,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: description
-      value: Creator of Facebook
+      value: Facebook theif
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
@@ -2160,7 +2160,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2353864, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -2231,15 +2231,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2353864, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -2501,11 +2501,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 30
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
@@ -2588,7 +2588,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
@@ -2596,7 +2596,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
@@ -2682,19 +2682,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: description
-      value: Do you know de wae?
+      value: ' know de wae?'
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 30
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
@@ -3226,7 +3226,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
@@ -3234,7 +3234,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2353864, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -3296,19 +3296,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: description
-      value: No plastic surgery
+      value: No implants
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2353864, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -3540,11 +3540,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: description
-      value: Kermit but cooler
+      value: Cool Kermit
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: health
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: _Attack
@@ -3552,7 +3552,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: mana
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11423862, guid: 4d8240e70d8677442b152fa7ad35a9aa, type: 2}
       propertyPath: team
