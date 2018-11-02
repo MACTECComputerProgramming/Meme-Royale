@@ -106,7 +106,7 @@ public class BoardBehaviourScript : MonoBehaviour
             int random = Random.Range(0, P1DeckCards.Count);
             GameObject tempCard = P1DeckCards[random];
 
-            //tempCard.transform.position = P1HandPos.position;
+            
             tempCard.GetComponent<CardBehaviourScript>().newPos = P1HandPos.position;
             tempCard.GetComponent<CardBehaviourScript>().SetCardStatus(CardBehaviourScript.CardStatus.InHand);
 
@@ -141,7 +141,7 @@ public class BoardBehaviourScript : MonoBehaviour
             targetHero = null;
             Debug.Log("Action Revet");
         }
-        //if(BoardBehaviourScript.instance.currentCard&&BoardBehaviourScript.instance.targetCard)
+      
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -149,8 +149,7 @@ public class BoardBehaviourScript : MonoBehaviour
             {
                 if (hit.transform.CompareTag("Board"))
                 {
-                    //do whatever......
-                    //Debug.Log(hit.point);
+                 
                     
                     if (BoardBehaviourScript.instance.currentCard)
                     drawP1Line(BoardBehaviourScript.instance.currentCard.transform.position, hit.point, Color.green, 0.1f);
@@ -245,7 +244,7 @@ public class BoardBehaviourScript : MonoBehaviour
         foreach (GameObject card in P1TableCards)
         {
             int numberOfCards = P1TableCards.Count;
-            //card.transform.position = P1TablePos.position + new Vector3(-numberOfCards + space - 2,0,0);
+      
             card.GetComponent<CardBehaviourScript>().newPos = P1TablePos.position + new Vector3(-numberOfCards + space - 2, 0, 0);
             space += gap;
         }
@@ -253,7 +252,7 @@ public class BoardBehaviourScript : MonoBehaviour
         foreach (GameObject card in P2TableCards)
         {
             int numberOfCards = P2TableCards.Count;
-            //card.transform.position = AITablePos.position + new Vector3(-numberOfCards + space2,0,0);
+            
             card.GetComponent<CardBehaviourScript>().newPos = P2TablePos.position + new Vector3(-numberOfCards + space2, 0, 0);
             space2 += gap;
         }
@@ -263,14 +262,14 @@ public class BoardBehaviourScript : MonoBehaviour
     {
         if (card.team == CardBehaviourScript.Team.P1 && P1Mana - card.mana >= 0 && P1TableCards.Count < 6)
         {
-            //card.gameObject.transform.position = P1TablePos.position;
+            
             card.GetComponent<CardBehaviourScript>().newPos = P1TablePos.position;
 
             P1HandCards.Remove(card.gameObject);
             P1TableCards.Add(card.gameObject);
 
             card.SetCardStatus(CardBehaviourScript.CardStatus.OnTable);
-            //PlaySound(cardDrop);
+       
 
             if (card.cardtype == CardBehaviourScript.CardType.Magic)///Apply Magic Effect 
             {
@@ -290,14 +289,14 @@ public class BoardBehaviourScript : MonoBehaviour
 
         if (card.team == CardBehaviourScript.Team.P2 && P2Mana - card.mana >= 0 && P2TableCards.Count < 6)
         {
-            //card.gameObject.transform.position = AITablePos.position;
+            
             card.GetComponent<CardBehaviourScript>().newPos = P2TablePos.position;
 
             P2HandCards.Remove(card.gameObject);
             P2TableCards.Add(card.gameObject);
 
             card.SetCardStatus(CardBehaviourScript.CardStatus.OnTable);
-            //PlaySound(cardDrop);
+            
 
             if (card.cardtype == CardBehaviourScript.CardType.Magic)///Apply Magic Effect 
             {
@@ -348,17 +347,17 @@ public class BoardBehaviourScript : MonoBehaviour
         if (winner == P1Hero)
         {
             Debug.Log("P1Hero");
-            Time.timeScale = 0;
+          
             winnertext.text = "Player 1 Wins!";
-            //Destroy(this);
+            
         }
 
         if (winner == P2Hero)
         {
             Time.timeScale = 0;
-            Debug.Log("AIHero");
+            Debug.Log("P2Hero");
             winnertext.text = "Player 2 Wins!";
-            //Destroy(this);
+           
         }
     }
     void OnGUI()
