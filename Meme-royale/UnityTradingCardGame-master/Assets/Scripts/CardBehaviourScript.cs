@@ -72,12 +72,10 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
     {
         if (BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && cardStatus == CardStatus.InHand && team == Team.P1)
         {
-            //Selected = false;
             BoardBehaviourScript.instance.PlaceCard(this);
         }
         else if (BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P2Turn && cardStatus == CardStatus.InHand && team == Team.P2)
         {
-            //Selected = false;
             BoardBehaviourScript.instance.PlaceCard(this);
         }
     }
@@ -200,27 +198,19 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
     }
     void OnMouseUp()
     {
-        //Debug.Log("On Mouse Up Event");
         Selected = false;
     }
     void OnMouseOver()
     {
-
-        //Debug.Log("On Mouse Over Event");
     }
     void OnMouseEnter()
     {
-        //Debug.Log("On Mouse Enter Event");
-        //newPos += new Vector3(0,0.5f,0);
     }
     void OnMouseExit()
     {
-        //Debug.Log("On Mouse Exit Event");
-        //newPos -= new Vector3(0,0.5f, 0);
     }
     void OnMouseDrag()
     {
-        //Debug.Log("On Mouse Drag Event");
         GetComponent<Rigidbody>().MovePosition(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen)));
     }
     public void SetCardStatus(CardStatus status)
@@ -274,9 +264,6 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
                     BoardBehaviourScript.instance.P1TableCards.Remove(card.gameObject);
                 else if (card.team == CardBehaviourScript.Team.P2)
                     BoardBehaviourScript.instance.P2TableCards.Remove(card.gameObject);
-
-
-                //BoardBehaviourScript.instance.PlaySound(BoardBehaviourScript.instance.cardDestroy);
                 Destroy(card.gameObject);
 
                 BoardBehaviourScript.instance.TablePositionUpdate();
@@ -284,7 +271,6 @@ public class CardBehaviourScript : CardGameBase, System.ICloneable
 
         }else
             {
-            //card = null;
         }
     }
     public void AddToHero(CardBehaviourScript magic, HeroBehaviourScript target, CustomAction action)

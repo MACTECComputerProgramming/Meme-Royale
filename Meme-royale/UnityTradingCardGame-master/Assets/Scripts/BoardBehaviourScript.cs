@@ -189,8 +189,6 @@ public class BoardBehaviourScript : MonoBehaviour
     {
         P1ManaText.text = P1Mana.ToString() + "/" + maxMana;
         P2ManaText.text = P2Mana.ToString() + "/" + maxMana;
-
-        
     }
 
     void DecksPositionUpdate()
@@ -430,13 +428,8 @@ public class BoardBehaviourScript : MonoBehaviour
             DrawCardFromDeck(CardBehaviourScript.Team.P2);
             turn = Turn.P2Turn;
         }
-
         HandPositionUpdate();
         TablePositionUpdate();
-
-       
-    
-    
     }
     void OnTriggerEnter(Collider Obj)
     {
