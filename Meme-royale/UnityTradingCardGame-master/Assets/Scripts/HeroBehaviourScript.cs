@@ -23,7 +23,7 @@ public class HeroBehaviourScript : CardGameBase ,ICloneable
         {
             if (BoardBehaviourScript.instance.currentCard.canPlay)
             {
-                if (BoardBehaviourScript.instance.currentCard.cardtype==CardBehaviourScript.CardType.Monster && BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn)
+                if (BoardBehaviourScript.instance.currentCard.cardtype==CardBehaviourScript.CardType.Monster)
                 {
                     BoardBehaviourScript.instance.currentCard.AttackHero(BoardBehaviourScript.instance.currentCard, this,true, delegate
                     {
@@ -40,15 +40,14 @@ public class HeroBehaviourScript : CardGameBase ,ICloneable
                 
             }
         }
-        else if (BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && !BoardBehaviourScript.instance.currentHero)
+        else if ( !BoardBehaviourScript.instance.currentHero)
         {
-            //if (BoardBehaviourScript.instance.currentHero._name == "MyHero")
             {
                 BoardBehaviourScript.instance.currentHero = this;
                 Debug.Log(name + "   Hero Selected");
             }
         }
-        else if (BoardBehaviourScript.instance.turn == BoardBehaviourScript.Turn.P1Turn && BoardBehaviourScript.instance.currentHero && CanAttack)//Hero Vs Hero
+        else if (BoardBehaviourScript.instance.currentHero && CanAttack)//Hero Vs Hero
         {
             BoardBehaviourScript.instance.targetHero = this;
 
@@ -80,12 +79,6 @@ public class HeroBehaviourScript : CardGameBase ,ICloneable
             {
                 target.Destroy(target);
             }
-
-            //if (attacker.health <= 0)
-            //{
-            //    BoardBehaviourScript.instance.
-            //}
-
             action();
             BoardBehaviourScript.instance.AddHistory(attacker, target);
         }
