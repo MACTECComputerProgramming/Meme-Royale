@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Meme.unity
+    path: Assets/Scenes/MainScreen.unity
     guid: 9fb10002f1461b44b8c9aa8982e02807
   - enabled: 1
     path: Assets/Scenes/CardGame.unity
     guid: b4c4923c203c98b4f90bf53220c06aff
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 54db9db9cb9c0cf459b95092eac7186a
+  - enabled: 1
+    path: Assets/Scenes/Tutorial 2.unity
+    guid: 7ede183a8fcd7624c9105e86bc3c97ee
+  - enabled: 1
+    path: Assets/Scenes/Tutorial 3.unity
+    guid: 945bf78492ed33a4d8ba1cf4f0fedf37
+  - enabled: 1
+    path: Assets/Scenes/Tutorial 4.unity
+    guid: de948d28dcce83a469f083fc501fe344
   m_configObjects: {}
