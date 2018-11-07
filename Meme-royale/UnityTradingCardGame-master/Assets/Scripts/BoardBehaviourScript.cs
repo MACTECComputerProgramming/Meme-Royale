@@ -333,6 +333,7 @@ public class BoardBehaviourScript : MonoBehaviour
 
             PlaceCard(tempCard.GetComponent<CardBehaviourScript>());
         }
+
         UpdateGame();
         EndTurn();
 
@@ -398,7 +399,7 @@ public class BoardBehaviourScript : MonoBehaviour
             }
         }
     }
-    public void EndTurn()
+    void EndTurn()
     {
         maxMana += (turnNumber-1)%2;
         if (maxMana >= 10) maxMana = 10;
