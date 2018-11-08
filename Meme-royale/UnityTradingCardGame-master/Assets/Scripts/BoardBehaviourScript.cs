@@ -149,8 +149,6 @@ public class BoardBehaviourScript : MonoBehaviour
             {
                 if (hit.transform.CompareTag("Board"))
                 {
-                 
-                    
                     if (BoardBehaviourScript.instance.currentCard)
                     drawP1Line(BoardBehaviourScript.instance.currentCard.transform.position, hit.point, Color.green, 0.1f);
                 }
@@ -352,7 +350,6 @@ public class BoardBehaviourScript : MonoBehaviour
 
         if (winner == P2Hero)
         {
-            Time.timeScale = 0;
             Debug.Log("P2Hero");
             winnertext.text = "Player 2 Wins!";
            
