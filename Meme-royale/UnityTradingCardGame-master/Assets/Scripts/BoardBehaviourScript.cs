@@ -10,6 +10,7 @@ public class BoardBehaviourScript : MonoBehaviour
     public Transform P1DeckPos;
     public Transform P1HandPos;
     public Transform P1TablePos;
+    public GameObject TargetCusor;
 
     public Transform P2DeckPos;
     public Transform P2HandPos;
@@ -141,7 +142,6 @@ public class BoardBehaviourScript : MonoBehaviour
             targetHero = null;
             Debug.Log("Action Revet");
         }
-      
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
