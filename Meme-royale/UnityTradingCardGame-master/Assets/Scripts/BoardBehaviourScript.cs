@@ -10,6 +10,7 @@ public class BoardBehaviourScript : MonoBehaviour
     public Transform P1DeckPos;
     public Transform P1HandPos;
     public Transform P1TablePos;
+    public GameObject TargetCusor;
 
     public Transform P2DeckPos;
     public Transform P2HandPos;
@@ -101,7 +102,7 @@ public class BoardBehaviourScript : MonoBehaviour
     public void DrawCardFromDeck(CardBehaviourScript.Team team)
     {
 
-        if (team == CardBehaviourScript.Team.P1 && P1DeckCards.Count != 0 && P1HandCards.Count < 10)
+        if (team == CardBehaviourScript.Team.P1 && P1DeckCards.Count != 0 && P1HandCards.Count < 6)
         {
             int random = Random.Range(0, P1DeckCards.Count);
             GameObject tempCard = P1DeckCards[random];
@@ -114,7 +115,7 @@ public class BoardBehaviourScript : MonoBehaviour
             P1HandCards.Add(tempCard);
         }
 
-        if (team == CardBehaviourScript.Team.P2 && P2DeckCards.Count != 0 && P2HandCards.Count < 10)
+        if (team == CardBehaviourScript.Team.P2 && P2DeckCards.Count != 0 && P2HandCards.Count < 6)
         {
             int random = Random.Range(0, P2DeckCards.Count);
             GameObject tempCard = P2DeckCards[random];
@@ -141,7 +142,6 @@ public class BoardBehaviourScript : MonoBehaviour
             targetHero = null;
             Debug.Log("Action Revet");
         }
-      
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -215,7 +215,7 @@ public class BoardBehaviourScript : MonoBehaviour
     {
         float space = 0f;
         float space2 = 0f;
-        float gap = 1.3f;
+        float gap = 1.4f;
 
         foreach (GameObject card in P1HandCards)
         {
