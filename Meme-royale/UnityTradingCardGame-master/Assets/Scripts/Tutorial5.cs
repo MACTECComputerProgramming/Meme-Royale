@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Back2Menu : MonoBehaviour {
+public class Tutorial5 : MonoBehaviour {
+
 	
-	
-	public void Back () {
+	public void  Back() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+		
 	}
-    public void Next()
-    {
+	
+	
+	public void Next() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+		
+	}
 }
