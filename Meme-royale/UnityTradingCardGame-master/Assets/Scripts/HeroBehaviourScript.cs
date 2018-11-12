@@ -64,12 +64,14 @@ public class HeroBehaviourScript : CardGameBase ,ICloneable
 
     void FixedUpdate()
     {
+        //Update Health and Attack
         healthText.text = health.ToString();
         AttackText.text = _Attack.ToString();
 
     }
     public void AttackCard(HeroBehaviourScript attacker, CardBehaviourScript target, CustomAction action)
     {
+        //Card attack another card
         if (attacker.CanAttack)
         {
             target.health -= attacker._Attack;
@@ -85,6 +87,7 @@ public class HeroBehaviourScript : CardGameBase ,ICloneable
     }
     public void AttackHero(HeroBehaviourScript attacker, HeroBehaviourScript target, CustomAction action)
     {
+        //Hero attack another hero
         if (attacker.CanAttack)
         {
             target.health -= attacker._Attack;
@@ -102,6 +105,7 @@ public class HeroBehaviourScript : CardGameBase ,ICloneable
 
     public object Clone()
     {
+        //Display Name, Health, and Attack
         HeroBehaviourScript temp = new HeroBehaviourScript();
         temp._name = _name;
         temp.health = health;

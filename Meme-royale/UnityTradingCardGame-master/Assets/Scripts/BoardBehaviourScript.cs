@@ -4,7 +4,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class BoardBehaviourScript : MonoBehaviour
 {
-    
+    //Telling the computer the code contain an object
     public static BoardBehaviourScript instance;
     public UnityEngine.UI.Text winnertext;
     public Transform P1DeckPos;
@@ -53,6 +53,7 @@ public class BoardBehaviourScript : MonoBehaviour
     public LayerMask layer;
     public void AddHistory(CardGameBase a, CardGameBase b)
     {
+        //Battle 
         Hashtable hash = new Hashtable();
 
         hash.Add(a, b);
@@ -90,6 +91,7 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     public void StartGame()
     {
+        //Draw cards when game starts
         gameStarted = true;
         UpdateGame();
 
@@ -101,7 +103,7 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     public void DrawCardFromDeck(CardBehaviourScript.Team team)
     {
-
+        //Draw random card to each team
         if (team == CardBehaviourScript.Team.P1 && P1DeckCards.Count != 0 && P1HandCards.Count < 6)
         {
             int random = Random.Range(0, P1DeckCards.Count);
@@ -134,6 +136,7 @@ public class BoardBehaviourScript : MonoBehaviour
 
     void Update()
     {
+        //Clicking
         if (Input.GetMouseButtonDown(1))
         {
             currentCard = null;
@@ -143,6 +146,7 @@ public class BoardBehaviourScript : MonoBehaviour
             Debug.Log("Action Revet");
         }
         {
+            //Green line appears when clicking on a card that been placed
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 250, layer))
@@ -150,7 +154,7 @@ public class BoardBehaviourScript : MonoBehaviour
                 if (hit.transform.CompareTag("Board"))
                 {
                     if (BoardBehaviourScript.instance.currentCard)
-                    drawP1Line(BoardBehaviourScript.instance.currentCard.transform.position, hit.point, Color.green, 0.1f);
+                    drawP1Line(BoardBehaviourScript.instance.currentCard.transform.position, hit.point, Color.green, 0f);
                 }
             }
         }
@@ -161,6 +165,7 @@ public class BoardBehaviourScript : MonoBehaviour
             EndGame(P1Hero);
 
     }
+    //Decribing the Green line 
     void drawP1Line(Vector3 start, Vector3 end, Color color, float duration = 0.2f)
     {
 
@@ -185,12 +190,14 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     void UpdateGame()
     {
+        //Update the Mana Text
         P1ManaText.text = P1Mana.ToString() + "/" + maxMana;
         P2ManaText.text = P2Mana.ToString() + "/" + maxMana;
     }
-
+    
     void DecksPositionUpdate()
     {
+        //A check to monitor what cards are in the Deck and how many for each team
         foreach (GameObject CardObject in P1DeckCards)
         {
             CardBehaviourScript c = CardObject.GetComponent<CardBehaviourScript>();
@@ -213,6 +220,7 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     public void HandPositionUpdate()
     {
+        //Checking what cards are in the Hand and how many for each team
         float space = 0f;
         float space2 = 0f;
         float gap = 1.4f;
@@ -233,6 +241,7 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     public void TablePositionUpdate()
     {
+        //Position the Table and Check what cards are Hand and how many for each team
         float space = 0f;
         float space2 = 0f;
         float gap = 2;
@@ -256,6 +265,7 @@ public class BoardBehaviourScript : MonoBehaviour
 
     public void PlaceCard(CardBehaviourScript card)
     {
+
         if (card.team == CardBehaviourScript.Team.P1 && P1Mana - card.mana >= 0 && P1TableCards.Count < 6)
         {
             
@@ -340,6 +350,7 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     public void EndGame(HeroBehaviourScript winner)
     {
+        //End game text on screen
         if (winner == P1Hero)
         {
             Debug.Log("P1Hero");
@@ -357,6 +368,7 @@ public class BoardBehaviourScript : MonoBehaviour
     }
     void OnGUI()
     {
+        //Positioning the buttons when start game
         if (gameStarted)
         {
             if (turn == Turn.P1Turn)
@@ -414,7 +426,7 @@ public class BoardBehaviourScript : MonoBehaviour
             card.GetComponent<CardBehaviourScript>().canPlay = true;
         P1Hero.CanAttack = true;
         P2Hero.CanAttack = true;
-
+        //Draw a card from deck to the person turn
         if (turn == Turn.P2Turn)
         {
             DrawCardFromDeck(CardBehaviourScript.Team.P1);
